@@ -252,20 +252,83 @@ if (SETTINGS.paymentLink) { $("#pay-link").href = SETTINGS.paymentLink; $("#pay-
 
 
 /* =========================================================
-   Gallery photo viewer
+   Photo carousels and viewer
    ========================================================= */
 
 const viewer = $("#viewer");
-$$(".gallery button").forEach((button) => {
-  button.addEventListener("click", () => {
-    const img = button.querySelector("img");
-    viewer.querySelector("img").src = img.src;
-    viewer.querySelector("img").alt = img.alt;
-    viewer.showModal();
-  });
-});
+const viewerImg = viewer.querySelector("img");
+let viewerSet = [];
+let viewerIndex = 0;
+
+function showViewerPhoto() {
+  const img = viewerSet[viewerIndex];
+  viewerImg.src = img.src;
+  viewerImg.alt = img.alt;
+  $("#viewer-count").textContent = (viewerIndex + 1) + " / " + viewerSet.length;
+  const many = viewerSet.length > 1;
+  $("#viewer-prev").hidden = !many;
+  $("#viewer-next").hidden = !many;
+  $("#viewer-count").hidden = !many;
+}
+function openViewer(images, index) {
+  viewerSet = images;
+  viewerIndex = index;
+  showViewerPhoto();
+  viewer.showModal();
+}
+function stepViewer(step) {
+  viewerIndex = (viewerIndex + step + viewerSet.length) % viewerSet.length;
+  showViewerPhoto();
+}
+$("#viewer-prev").addEventListener("click", () => stepViewer(-1));
+$("#viewer-next").addEventListener("click", () => stepViewer(1));
 $("#viewer-close").addEventListener("click", () => viewer.close());
 viewer.addEventListener("click", (e) => { if (e.target === viewer) viewer.close(); });
+viewer.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft") stepViewer(-1);
+  if (e.key === "ArrowRight") stepViewer(1);
+});
+let touchX = null;
+viewer.addEventListener("touchstart", (e) => { touchX = e.touches[0].clientX; }, { passive: true });
+viewer.addEventListener("touchend", (e) => {
+  if (touchX === null) return;
+  const moved = e.changedTouches[0].clientX - touchX;
+  if (Math.abs(moved) > 40) stepViewer(moved < 0 ? 1 : -1);
+  touchX = null;
+});
+
+$$(".carousel").forEach((carousel) => {
+  const track = carousel.querySelector(".track");
+  const images = [...track.querySelectorAll("img")];
+  const prev = carousel.querySelector(".prev");
+  const next = carousel.querySelector(".next");
+  const count = carousel.querySelector(".car-count");
+  const current = () => Math.round(track.scrollLeft / track.clientWidth);
+
+  function update() {
+    const i = current();
+    count.textContent = (i + 1) + " / " + images.length;
+    prev.disabled = i === 0;
+    next.disabled = i === images.length - 1;
+  }
+  const go = (step) => track.scrollTo({ left: (current() + step) * track.clientWidth, behavior: "smooth" });
+
+  prev.addEventListener("click", () => go(-1));
+  next.addEventListener("click", () => go(1));
+  track.addEventListener("scroll", update, { passive: true });
+  track.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") { e.preventDefault(); go(-1); }
+    if (e.key === "ArrowRight") { e.preventDefault(); go(1); }
+  });
+  images.forEach((img, i) => img.addEventListener("click", () => openViewer(images, i)));
+  if (images.length < 2) { prev.hidden = true; next.hidden = true; count.hidden = true; }
+  update();
+});
+
+// Add-on photos open on their own
+$$(".zoom").forEach((button) => {
+  button.addEventListener("click", () => openViewer([button.querySelector("img")], 0));
+});
 
 
 // First paint
