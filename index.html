@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maghi’s Picnic | Picnic set-ups, dome packages and event rental</title>
+  <meta name="description" content="Maghi’s Picnic sets up parasols, domes, chairs and tables for birthdays, bride-to-be parties, open houses and gatherings. See packages and book on WhatsApp.">
+  <meta property="og:title" content="Maghi’s Picnic">
+  <meta property="og:description" content="Picnic set-ups, dome packages and event rental. Book on WhatsApp.">
+  <meta property="og:image" content="images/white-1.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛱️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ TOP: HEADER + HERO ============ -->
+  <div class="sky">
+    <header class="wrap header">
+      <a href="#top" class="brand" aria-label="Maghi’s Picnic home">
+        <img src="images/logo.png" alt="Maghi’s Picnic" width="260" height="170">
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#picnic">Picnic</a>
+        <a href="#dome">Dome</a>
+        <a href="#rental">Rental</a>
+        <a href="#addons">Add-ons</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#book">Book</a>
+      </nav>
+      <a class="btn btn-sun header-cta" data-wa href="https://wa.me/60137343736">WhatsApp us</a>
+    </header>
+
+    <section class="wrap hero" id="top">
+      <div class="hero-text">
+        <h1>Picnic set-ups, ready when you arrive.</h1>
+        <p class="lede">Maghi’s Picnic sets up parasols, domes, chairs and tables for birthdays, bride-to-be nights, open houses and gatherings. Pick a package, tell us the date and we’ll set it up for you.</p>
+        <div class="hero-actions">
+          <a class="btn btn-sun" href="#book">Book a set-up</a>
+          <a class="btn btn-line" href="#picnic">See packages and prices</a>
+        </div>
+        <ul class="hero-facts">
+          <li><b>RM79</b> picnic for two</li>
+          <li><b>RM119</b> dome for two</li>
+          <li><b>RM10</b> chair or table rental</li>
+        </ul>
+      </div>
+      <div class="arches" aria-hidden="true">
+        <div class="arch arch-side"><img src="images/chandelier-2.jpg" alt=""></div>
+        <div class="arch arch-main"><img src="images/white-1.jpg" alt=""></div>
+        <div class="arch arch-side"><img src="images/double-1.jpg" alt=""></div>
+      </div>
+    </section>
+  </div>
+
+  <main>
+
+    <!-- ============ OCCASIONS ============ -->
+    <section class="section section-tight">
+      <div class="wrap">
+        <h2>What are you planning?</h2>
+        <div class="occasions">
+          <div class="occasion">
+            <h3><span aria-hidden="true">🎉</span> Personal and small events</h3>
+            <p>A santai seating zone for a birthday party, akikah or a small gathering with friends.</p>
+          </div>
+          <div class="occasion">
+            <h3><span aria-hidden="true">🌙</span> Festive and home events</h3>
+            <p>Seating for a Raya open house, BBQ night or a family lepak session.</p>
+          </div>
+          <div class="occasion">
+            <h3><span aria-hidden="true">🌿</span> Lifestyle and aesthetic events</h3>
+            <p>Outdoor usrah, farewell gatherings, school events or a relax zone at an outdoor event.</p>
+          </div>
+          <div class="occasion">
+            <h3><span aria-hidden="true">🏢</span> Corporate and group events</h3>
+            <p>Team building, company retreats and workshops.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PICNIC PACKAGES ============ -->
+    <section class="section section-paper" id="picnic">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Picnic packages</h2>
+            <p class="section-intro">A parasol set-up with chairs, a table and styling. The price depends on how many people are coming. Night slots cost RM10 more.</p>
+          </div>
+          <div class="controls" role="group" aria-label="Picnic price options">
+            <div class="control">
+              <span class="control-label" id="pax-label">People</span>
+              <div class="stepper">
+                <button type="button" id="pax-minus" aria-label="Fewer people">−</button>
+                <output id="pax-value" aria-labelledby="pax-label">2</output>
+                <button type="button" id="pax-plus" aria-label="More people">+</button>
+              </div>
+            </div>
+            <div class="control">
+              <span class="control-label">Time</span>
+              <div class="segmented" id="picnic-time">
+                <button type="button" data-time="day" aria-pressed="true">Day</button>
+                <button type="button" data-time="night" aria-pressed="false">Night</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-4">
+          <article class="pkg">
+            <div class="arch pkg-photo"><img src="images/basic-1.jpg" alt="Basic picnic set-up with a parasol, three chairs, cushions and a table by the lake" loading="lazy"></div>
+            <h3>Basic</h3>
+            <p>Parasol, chairs, table, cushions and a message board.</p>
+            <p class="price"><span data-price="picnic:basic">RM79</span> <small data-price-note="picnic">for 2 people, day</small></p>
+            <button class="btn btn-ink" type="button" data-book="picnic:basic">Book Basic</button>
+          </article>
+          <article class="pkg">
+            <div class="arch pkg-photo"><img src="images/chandelier-1.jpg" alt="Picnic set-up with flowers hanging under the parasol" loading="lazy"></div>
+            <h3>Flower Chandelier</h3>
+            <p>Everything in Basic, plus flowers hanging under the parasol.</p>
+            <p class="price"><span data-price="picnic:chandelier">RM83</span> <small data-price-note="picnic">for 2 people, day</small></p>
+            <button class="btn btn-ink" type="button" data-book="picnic:chandelier">Book Flower Chandelier</button>
+          </article>
+          <article class="pkg">
+            <div class="arch pkg-photo"><img src="images/flower-1.jpg" alt="Picnic set-up with a hanging flower backdrop and a birthday banner" loading="lazy"></div>
+            <h3>Flower Background</h3>
+            <p>Everything in Basic, plus a flower backdrop with a banner.</p>
+            <p class="price"><span data-price="picnic:flower">RM85</span> <small data-price-note="picnic">for 2 people, day</small></p>
+            <button class="btn btn-ink" type="button" data-book="picnic:flower">Book Flower Background</button>
+          </article>
+          <article class="pkg">
+            <div class="arch pkg-photo"><img src="images/balloon-1.jpg" alt="Picnic set-up with a row of balloons and a birthday banner" loading="lazy"></div>
+            <h3>Simple Balloon Background</h3>
+            <p>Everything in Basic, plus a row of balloons with a banner.</p>
+            <p class="price"><span data-price="picnic:balloon">RM98</span> <small data-price-note="picnic">for 2 people, day</small></p>
+            <button class="btn btn-ink" type="button" data-book="picnic:balloon">Book Simple Balloon</button>
+          </article>
+        </div>
+
+        <details class="pricelist">
+          <summary>See the full picnic price list</summary>
+          <div class="table-scroll">
+            <table id="picnic-table">
+              <caption>Day prices in RM. Add RM10 for a night slot.</caption>
+            </table>
+          </div>
+          <p class="fineprint">More than 16 people? WhatsApp us for a quote.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============ DOME PACKAGES ============ -->
+    <section class="section" id="dome">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Dome packages</h2>
+            <p class="section-intro">A khaki dome with seating inside. It gives you shade in the day and a cosy spot with lights at night.</p>
+          </div>
+          <div class="controls" role="group" aria-label="Dome price options">
+            <div class="control">
+              <span class="control-label">People</span>
+              <div class="segmented" id="dome-tier">
+                <button type="button" data-tier="0" aria-pressed="true">2</button>
+                <button type="button" data-tier="1" aria-pressed="false">3–4</button>
+                <button type="button" data-tier="2" aria-pressed="false">5–6</button>
+                <button type="button" data-tier="3" aria-pressed="false">7–8</button>
+                <button type="button" data-tier="4" aria-pressed="false">9–10</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="pkg">
+            <div class="arch pkg-photo"><img src="images/dome-1.jpg" alt="Dome set up under the trees with chairs, a table, a banner and balloons" loading="lazy"></div>
+            <h3>Dome Package</h3>
+            <p>Dome, chairs, table, banner, balloons and a welcome sign.</p>
+            <p class="price"><span data-price="dome:dome">RM119</span> <small data-price-note="dome">for 2 people</small></p>
+            <button class="btn btn-ink" type="button" data-book="dome:dome">Book Dome Package</button>
+          </article>
+          <article class="pkg">
+            <div class="arch pkg-photo"><img src="images/fullballoon-1.jpg" alt="Dome with pink and white balloon columns at the entrance, by the sea" loading="lazy"></div>
+            <h3>Dome Full Balloon</h3>
+            <p>The Dome Package with balloon columns at the entrance.</p>
+            <p class="price"><span data-price="dome:fullballoon">RM149</span> <small data-price-note="dome">for 2 people</small></p>
+            <button class="btn btn-ink" type="button" data-book="dome:fullballoon">Book Dome Full Balloon</button>
+          </article>
+          <article class="pkg">
+            <div class="arch pkg-photo"><img src="images/character-1.jpg" alt="Dome with a gold number balloon and yellow duck balloons" loading="lazy"></div>
+            <h3>Dome Character Theme</h3>
+            <p>A themed dome with character and number balloons.</p>
+            <p class="price"><span>RM188</span> <small>for 10 people</small></p>
+            <button class="btn btn-ink" type="button" data-book="dome:character">Book Character Theme</button>
+          </article>
+          <article class="pkg">
+            <div class="arch pkg-photo"><img src="images/double-1.jpg" alt="Two domes joined together over a long table with blue balloons" loading="lazy"></div>
+            <h3>Double Dome</h3>
+            <p>Two domes joined together over a long table for a big group.</p>
+            <p class="price"><span>RM318</span></p>
+            <button class="btn btn-ink" type="button" data-book="dome:double">Book Double Dome</button>
+          </article>
+          <article class="pkg">
+            <div class="arch pkg-photo"><img src="images/bride-1.jpg" alt="Dome lit with fairy lights at night for a bride-to-be celebration" loading="lazy"></div>
+            <h3>Bride To Be</h3>
+            <p>The Dome Package styled in white for a bride-to-be night.</p>
+            <p class="price"><span>RM139</span> <small>for 5 people</small></p>
+            <button class="btn btn-ink" type="button" data-book="dome:bride">Book Bride To Be</button>
+          </article>
+          <article class="pkg">
+            <div class="arch pkg-photo"><img src="images/white-1.jpg" alt="Dome on the beach styled in white and green" loading="lazy"></div>
+            <h3>Dome In White</h3>
+            <p>The Dome Package styled in white and green.</p>
+            <p class="price"><span>RM169</span> <small>for 10 people</small></p>
+            <button class="btn btn-ink" type="button" data-book="dome:white">Book Dome In White</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RENTAL ============ -->
+    <section class="section section-paper" id="rental">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Rent for your own event</h2>
+            <p class="section-intro">Hosting at home, at school or at the office? Rent only the pieces you need. Prices are for 4 hours. Delivery is for 10 people and above.</p>
+          </div>
+          <button class="btn btn-ink" type="button" data-book="rental:custom">Book a rental</button>
+        </div>
+
+        <div class="rental">
+          <div class="items">
+            <div class="item"><img src="images/item-dome.jpg" alt="Khaki dome" loading="lazy"><h3>Dome</h3><p class="price"><span>RM60</span></p></div>
+            <div class="item"><img src="images/item-parasol.jpg" alt="Khaki parasol with base" loading="lazy"><h3>Parasol</h3><p class="price"><span>RM40</span></p></div>
+            <div class="item"><img src="images/item-table.jpg" alt="Folding wooden table" loading="lazy"><h3>Table</h3><p class="price"><span>RM10</span></p></div>
+            <div class="item"><img src="images/item-chair.jpg" alt="Folding camping chair" loading="lazy"><h3>Chair</h3><p class="price"><span>RM10</span></p></div>
+          </div>
+
+          <div class="setups">
+            <h3>What past rentals cost</h3>
+            <ul>
+              <li><img src="images/setup-chairs.jpg" alt="Rows of chairs and tables outside a house" loading="lazy"><div><b>22 chairs and 5 tables</b><span>RM270</span></div></li>
+              <li><img src="images/setup-kesyukuran.jpg" alt="Garden set-up with tables, chairs and balloons" loading="lazy"><div><b>24 chairs, 7 tables and balloon deco</b><span>RM335</span></div></li>
+              <li><img src="images/setup-lepak.jpg" alt="Dome and parasol set up in a garden" loading="lazy"><div><b>Dome and parasol lepak zone, 4 hours</b><span>RM260</span></div></li>
+              <li><img src="images/setup-openhouse.jpg" alt="Dome, parasol and chairs in front of a house" loading="lazy"><div><b>Open house set-up, 5 hours</b><span>RM350</span></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ADD-ONS ============ -->
+    <section class="section" id="addons">
+      <div class="wrap">
+        <h2>Add-ons</h2>
+        <p class="section-intro">Small extras you can add to a picnic or dome package.</p>
+        <div class="grid grid-4 addons">
+          <div class="addon"><img src="images/addon-mat.jpg" alt="Picnic mat beside the set-up" loading="lazy"><h3>Mat</h3><p class="price"><span>+RM5</span></p></div>
+          <div class="addon"><img src="images/addon-number.jpg" alt="Pink number balloon beside a balloon row" loading="lazy"><h3>Number balloon</h3><p class="price"><span>+RM6</span> <small>each</small></p></div>
+          <div class="addon"><img src="images/addon-fullballoon.jpg" alt="Full balloon background behind a picnic set-up" loading="lazy"><h3>Full balloon background</h3><p class="price"><span>+RM15</span></p></div>
+          <div class="addon"><img src="images/addon-fullnumber.jpg" alt="Full balloon background with a number balloon" loading="lazy"><h3>Full balloon background with number balloon</h3><p class="price"><span>+RM20</span></p></div>
+        </div>
+        <p class="fineprint">Want character balloons? Tell us the theme on WhatsApp and we’ll give you the price.</p>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section section-paper" id="gallery">
+      <div class="wrap">
+        <h2>Past set-ups</h2>
+        <p class="section-intro">Tap a photo to see it bigger.</p>
+        <div class="gallery">
+          <button type="button"><img src="images/g-01.jpg" alt="Chairs and tables set up outside a house for rental" loading="lazy"></button>
+          <button type="button"><img src="images/g-03.jpg" alt="Dome with fairy lights at dusk" loading="lazy"></button>
+          <button type="button"><img src="images/g-07.jpg" alt="View from inside a dome looking out to the sea" loading="lazy"></button>
+          <button type="button"><img src="images/g-08.jpg" alt="Picnic set-up at night with lights" loading="lazy"></button>
+          <button type="button"><img src="images/g-05.jpg" alt="Double dome with brown and cream balloons" loading="lazy"></button>
+          <button type="button"><img src="images/g-02.jpg" alt="Garden set-up under a pergola with balloons" loading="lazy"></button>
+          <button type="button"><img src="images/g-09.jpg" alt="Picnic for twelve people under the trees" loading="lazy"></button>
+          <button type="button"><img src="images/g-06.jpg" alt="Dome by the water at night" loading="lazy"></button>
+          <button type="button"><img src="images/g-13.jpg" alt="Dome with a gold number balloon" loading="lazy"></button>
+          <button type="button"><img src="images/g-12.jpg" alt="Ramadan open house set-up in front of a house" loading="lazy"></button>
+          <button type="button"><img src="images/g-11.jpg" alt="Dome with chairs and tables in a garden" loading="lazy"></button>
+          <button type="button"><img src="images/g-14.jpg" alt="Bride-to-be picnic with purple flowers" loading="lazy"></button>
+          <button type="button"><img src="images/g-10.jpg" alt="Dome with orange balloon columns at night" loading="lazy"></button>
+          <button type="button"><img src="images/g-04.jpg" alt="Inside a double dome with blue flowers" loading="lazy"></button>
+          <button type="button"><img src="images/g-15.jpg" alt="Long row of tables and chairs for an event" loading="lazy"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING ============ -->
+    <section class="section" id="book">
+      <div class="wrap">
+        <h2>Book your set-up</h2>
+        <ol class="steps">
+          <li>Fill in the form below.</li>
+          <li>Send it to us on WhatsApp.</li>
+          <li>We confirm your date and share the payment details.</li>
+          <li>Arrive to a finished set-up.</li>
+        </ol>
+
+        <div class="booking">
+          <form id="booking-form" novalidate>
+            <div class="field">
+              <label for="f-type">What would you like?</label>
+              <select id="f-type">
+                <option value="picnic">Picnic package</option>
+                <option value="dome">Dome package</option>
+                <option value="rental">Event rental</option>
+              </select>
+            </div>
+
+            <!-- Picnic fields -->
+            <div class="field-group" data-for="picnic">
+              <div class="field">
+                <label for="f-picnic-pkg">Package</label>
+                <select id="f-picnic-pkg"></select>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="f-pax">People (2 to 16)</label>
+                  <input id="f-pax" type="number" min="2" max="16" value="2" inputmode="numeric">
+                </div>
+                <div class="field">
+                  <label for="f-time">Slot</label>
+                  <select id="f-time">
+                    <option value="day">Day</option>
+                    <option value="night">Night (+RM10)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dome fields -->
+            <div class="field-group" data-for="dome" hidden>
+              <div class="field">
+                <label for="f-dome-pkg">Package</label>
+                <select id="f-dome-pkg"></select>
+              </div>
+              <div class="field" id="f-tier-field">
+                <label for="f-tier">People</label>
+                <select id="f-tier">
+                  <option value="0">2 people</option>
+                  <option value="1">3 to 4 people</option>
+                  <option value="2">5 to 6 people</option>
+                  <option value="3">7 to 8 people</option>
+                  <option value="4">9 to 10 people</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Rental fields -->
+            <div class="field-group" data-for="rental" hidden>
+              <p class="fineprint">How many of each do you need? Prices are for 4 hours.</p>
+              <div class="field-row field-row-4">
+                <div class="field"><label for="r-dome">Domes</label><input id="r-dome" type="number" min="0" value="0" inputmode="numeric"></div>
+                <div class="field"><label for="r-parasol">Parasols</label><input id="r-parasol" type="number" min="0" value="0" inputmode="numeric"></div>
+                <div class="field"><label for="r-table">Tables</label><input id="r-table" type="number" min="0" value="0" inputmode="numeric"></div>
+                <div class="field"><label for="r-chair">Chairs</label><input id="r-chair" type="number" min="0" value="0" inputmode="numeric"></div>
+              </div>
+            </div>
+
+            <!-- Add-ons (picnic and dome only) -->
+            <fieldset class="field-group" id="addon-fields">
+              <legend>Add-ons</legend>
+              <div class="field-row">
+                <div class="field"><label for="a-mat">Mats (RM5 each)</label><input id="a-mat" type="number" min="0" value="0" inputmode="numeric"></div>
+                <div class="field"><label for="a-number">Number balloons (RM6 each)</label><input id="a-number" type="number" min="0" value="0" inputmode="numeric"></div>
+              </div>
+              <label class="check"><input id="a-full" type="checkbox"> Full balloon background (RM15, or RM20 with one number balloon)</label>
+              <label class="check"><input id="a-character" type="checkbox"> Character balloons (we’ll quote the price)</label>
+            </fieldset>
+
+            <div class="field-row">
+              <div class="field"><label for="f-date">Date</label><input id="f-date" type="date" required></div>
+              <div class="field"><label for="f-clock">Time</label><input id="f-clock" type="time"></div>
+            </div>
+            <div class="field"><label for="f-place">Location</label><input id="f-place" type="text" placeholder="Park, beach or address" required autocomplete="off"></div>
+            <div class="field"><label for="f-name">Your name</label><input id="f-name" type="text" required autocomplete="name"></div>
+            <div class="field"><label for="f-notes">Anything else? (theme, colours, message for the board)</label><textarea id="f-notes" rows="3"></textarea></div>
+          </form>
+
+          <aside class="summary" aria-live="polite">
+            <h3>Your booking</h3>
+            <ul id="summary-lines"></ul>
+            <p class="summary-total"><span>Estimated total</span> <b id="summary-total">RM79</b></p>
+            <p class="form-msg" id="form-msg" role="alert" hidden></p>
+            <button class="btn btn-wa" type="button" id="send-wa">Send booking on WhatsApp</button>
+            <a class="btn btn-line-ink" id="pay-link" href="#" target="_blank" rel="noopener" hidden>Pay online</a>
+            <p class="fineprint">This opens WhatsApp with your booking details filled in. We’ll confirm the final price and your date there.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <img class="footer-logo" src="images/logo.png" alt="Maghi’s Picnic" width="260" height="170" loading="lazy">
+        <p>Picnic set-ups, dome packages and event rental.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p><a data-wa href="https://wa.me/60137343736">WhatsApp 013-734 3736</a></p>
+        <p><a href="tel:+60137343736">Call 013-734 3736</a></p>
+      </div>
+      <div>
+        <h3>Follow @maghis.picnic</h3>
+        <p class="socials">
+          <a href="https://www.instagram.com/maghis.picnic" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@maghis.picnic" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.facebook.com/maghis.picnic" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.threads.com/@maghis.picnic" target="_blank" rel="noopener">Threads</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" data-wa href="https://wa.me/60137343736" aria-label="Chat with us on WhatsApp">WhatsApp</a>
+
+  <!-- Photo viewer -->
+  <dialog id="viewer" aria-label="Photo viewer">
+    <img src="" alt="">
+    <button type="button" id="viewer-close">Close</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
