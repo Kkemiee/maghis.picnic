@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Maghi’s Picnic | Picnic set-ups, dome packages and event rental</title>
   <meta name="description" content="Maghi’s Picnic sets up parasols, domes, chairs and tables for birthdays, bride-to-be parties, open houses and gatherings. See packages and book on WhatsApp.">
-  <meta name="theme-color" content="#fdf6fa">
+  <meta name="theme-color" content="#140e1a">
   <meta property="og:title" content="Maghi’s Picnic">
   <meta property="og:description" content="Picnic set-ups, dome packages and event rental. Book on WhatsApp.">
   <meta property="og:image" content="images/white/1.jpg">
@@ -38,12 +38,15 @@
   </svg>
 
   <!-- ============ TOP: HEADER + HERO ============ -->
-  <div class="holo">
+  <div class="hero-zone">
+    <div class="aurora" aria-hidden="true"></div>
+    <div class="grid-floor" aria-hidden="true"></div>
     <header class="wrap header">
       <a href="#top" class="brand" aria-label="Maghi’s Picnic home">
         <img src="images/logo.png" alt="Maghi’s Picnic" width="260" height="170">
       </a>
       <nav class="nav" aria-label="Main">
+        <a href="#themes">Themes</a>
         <a href="#picnic">Picnic</a>
         <a href="#dome">Dome</a>
         <a href="#rental">Rental</a>
@@ -68,7 +71,7 @@
         </ul>
       </div>
       <div class="hero-art" aria-hidden="true">
-        <div class="arch hero-main"><img src="images/white/1.jpg" alt=""></div>
+        <div class="arch hero-main"><img id="hero-photo" src="images/white/1.jpg" alt=""></div>
         <div class="hero-bubble"><img src="images/chandelier/2.jpg" alt=""></div>
         <svg class="orbit" viewBox="0 0 500 500">
           <ellipse cx="250" cy="250" rx="244" ry="88" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="2 10" stroke-linecap="round"/>
@@ -105,6 +108,203 @@
             <h3><span aria-hidden="true">🍃</span> Corporate and group events</h3>
             <p>Team building, company retreats and workshops.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COLOUR THEMES ============ -->
+    <section class="section themes" id="themes">
+      <div class="wrap">
+        <h2>Pick a colour theme</h2>
+        <p class="section-intro">Every picnic and dome set-up can be styled in one of these themes. Tap a colour to see real set-ups. The whole page changes to match.</p>
+        <div class="swatches" role="group" aria-label="Colour themes">
+          <button type="button" class="swatch" data-theme-pick="champagne" aria-pressed="false" style="--sa:#f6d2a2;--sb:#ffab7a">
+            <span class="orb" aria-hidden="true"></span>
+            <span class="sw-name">Champagne</span>
+          </button>
+          <button type="button" class="swatch" data-theme-pick="garden" aria-pressed="false" style="--sa:#c49bff;--sb:#7fd0ff">
+            <span class="orb" aria-hidden="true"></span>
+            <span class="sw-name">Garden</span>
+          </button>
+          <button type="button" class="swatch" data-theme-pick="blue" aria-pressed="false" style="--sa:#8fd2ff;--sb:#5b8cff">
+            <span class="orb" aria-hidden="true"></span>
+            <span class="sw-name">Blue</span>
+          </button>
+          <button type="button" class="swatch" data-theme-pick="pink" aria-pressed="false" style="--sa:#ff79bf;--sb:#c4ff6b">
+            <span class="orb" aria-hidden="true"></span>
+            <span class="sw-name">Pink</span>
+          </button>
+          <button type="button" class="swatch" data-theme-pick="purple" aria-pressed="false" style="--sa:#c08bff;--sb:#8a5cff">
+            <span class="orb" aria-hidden="true"></span>
+            <span class="sw-name">Purple</span>
+          </button>
+          <button type="button" class="swatch" data-theme-pick="white" aria-pressed="false" style="--sa:#ffffff;--sb:#c9ecd2">
+            <span class="orb" aria-hidden="true"></span>
+            <span class="sw-name">White</span>
+          </button>
+          <button type="button" class="swatch swatch-reset" data-theme-pick="maghi" aria-pressed="true" style="--sa:#ff86b0;--sb:#a6e57a">
+            <span class="orb" aria-hidden="true"></span>
+            <span class="sw-name">Maghi’s</span>
+          </button>
+        </div>
+        <div class="theme-panels">
+        <article class="spot theme-panel" data-panel="champagne">
+          <div class="spot-media">
+        <div class="carousel stage">
+          <div class="track" tabindex="0" aria-label="Champagne theme photos">
+            <img src="images/theme-champagne/1.jpg" alt="Champagne theme, photo 1 of 6" loading="lazy">
+            <img src="images/theme-champagne/2.jpg" alt="Champagne theme, photo 2 of 6" loading="lazy">
+            <img src="images/theme-champagne/3.jpg" alt="Champagne theme, photo 3 of 6" loading="lazy">
+            <img src="images/theme-champagne/4.jpg" alt="Champagne theme, photo 4 of 6" loading="lazy">
+            <img src="images/theme-champagne/5.jpg" alt="Champagne theme, photo 5 of 6" loading="lazy">
+            <img src="images/theme-champagne/6.jpg" alt="Champagne theme, photo 6 of 6" loading="lazy">
+          </div>
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 6</span>
+        </div>
+        <div class="thumbs"></div>
+          </div>
+          <div class="spot-info">
+            <p class="spot-kind"><svg class="ic" aria-hidden="true"><use href="#flower"/></svg> Colour theme, 6 photos</p>
+            <h3>Champagne</h3>
+            <p class="spot-desc">Peach wisteria, orange and blush roses, cream cushions and a soft white backdrop.</p>
+            <p class="theme-note">Works with any picnic or dome package. Pick it in the booking form and we’ll style your set-up to match.</p>
+            <button class="btn btn-glow" type="button" data-theme-book="champagne">Book with Champagne theme</button>
+            <p class="spot-hint">Tap a photo to see it full size.</p>
+          </div>
+        </article>
+        <article class="spot theme-panel" data-panel="garden" hidden>
+          <div class="spot-media">
+        <div class="carousel stage">
+          <div class="track" tabindex="0" aria-label="Garden theme photos">
+            <img src="images/theme-garden/1.jpg" alt="Garden theme, photo 1 of 6" loading="lazy">
+            <img src="images/theme-garden/2.jpg" alt="Garden theme, photo 2 of 6" loading="lazy">
+            <img src="images/theme-garden/3.jpg" alt="Garden theme, photo 3 of 6" loading="lazy">
+            <img src="images/theme-garden/4.jpg" alt="Garden theme, photo 4 of 6" loading="lazy">
+            <img src="images/theme-garden/5.jpg" alt="Garden theme, photo 5 of 6" loading="lazy">
+            <img src="images/theme-garden/6.jpg" alt="Garden theme, photo 6 of 6" loading="lazy">
+          </div>
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 6</span>
+        </div>
+        <div class="thumbs"></div>
+          </div>
+          <div class="spot-info">
+            <p class="spot-kind"><svg class="ic" aria-hidden="true"><use href="#flower"/></svg> Colour theme, 6 photos</p>
+            <h3>Garden</h3>
+            <p class="spot-desc">Wisteria in blue, lilac and pink with bright mixed flowers. Fresh and colourful in the daylight.</p>
+            <p class="theme-note">Works with any picnic or dome package. Pick it in the booking form and we’ll style your set-up to match.</p>
+            <button class="btn btn-glow" type="button" data-theme-book="garden">Book with Garden theme</button>
+            <p class="spot-hint">Tap a photo to see it full size.</p>
+          </div>
+        </article>
+        <article class="spot theme-panel" data-panel="blue" hidden>
+          <div class="spot-media">
+        <div class="carousel stage">
+          <div class="track" tabindex="0" aria-label="Blue theme photos">
+            <img src="images/theme-blue/1.jpg" alt="Blue theme, photo 1 of 5" loading="lazy">
+            <img src="images/theme-blue/2.jpg" alt="Blue theme, photo 2 of 5" loading="lazy">
+            <img src="images/theme-blue/3.jpg" alt="Blue theme, photo 3 of 5" loading="lazy">
+            <img src="images/theme-blue/4.jpg" alt="Blue theme, photo 4 of 5" loading="lazy">
+            <img src="images/theme-blue/5.jpg" alt="Blue theme, photo 5 of 5" loading="lazy">
+          </div>
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 5</span>
+        </div>
+        <div class="thumbs"></div>
+          </div>
+          <div class="spot-info">
+            <p class="spot-kind"><svg class="ic" aria-hidden="true"><use href="#flower"/></svg> Colour theme, 5 photos</p>
+            <h3>Blue</h3>
+            <p class="spot-desc">Baby blue wisteria and blue roses. Lovely at night with fairy lights under the parasol.</p>
+            <p class="theme-note">Works with any picnic or dome package. Pick it in the booking form and we’ll style your set-up to match.</p>
+            <button class="btn btn-glow" type="button" data-theme-book="blue">Book with Blue theme</button>
+            <p class="spot-hint">Tap a photo to see it full size.</p>
+          </div>
+        </article>
+        <article class="spot theme-panel" data-panel="pink" hidden>
+          <div class="spot-media">
+        <div class="carousel stage">
+          <div class="track" tabindex="0" aria-label="Pink theme photos">
+            <img src="images/theme-pink/1.jpg" alt="Pink theme, photo 1 of 6" loading="lazy">
+            <img src="images/theme-pink/2.jpg" alt="Pink theme, photo 2 of 6" loading="lazy">
+            <img src="images/theme-pink/3.jpg" alt="Pink theme, photo 3 of 6" loading="lazy">
+            <img src="images/theme-pink/4.jpg" alt="Pink theme, photo 4 of 6" loading="lazy">
+            <img src="images/theme-pink/5.jpg" alt="Pink theme, photo 5 of 6" loading="lazy">
+            <img src="images/theme-pink/6.jpg" alt="Pink theme, photo 6 of 6" loading="lazy">
+          </div>
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 6</span>
+        </div>
+        <div class="thumbs"></div>
+          </div>
+          <div class="spot-info">
+            <p class="spot-kind"><svg class="ic" aria-hidden="true"><use href="#flower"/></svg> Colour theme, 6 photos</p>
+            <h3>Pink</h3>
+            <p class="spot-desc">Pink wisteria with coral flower bunches. Sweet for birthdays and family gatherings.</p>
+            <p class="theme-note">Works with any picnic or dome package. Pick it in the booking form and we’ll style your set-up to match.</p>
+            <button class="btn btn-glow" type="button" data-theme-book="pink">Book with Pink theme</button>
+            <p class="spot-hint">Tap a photo to see it full size.</p>
+          </div>
+        </article>
+        <article class="spot theme-panel" data-panel="purple" hidden>
+          <div class="spot-media">
+        <div class="carousel stage">
+          <div class="track" tabindex="0" aria-label="Purple theme photos">
+            <img src="images/theme-purple/1.jpg" alt="Purple theme, photo 1 of 7" loading="lazy">
+            <img src="images/theme-purple/2.jpg" alt="Purple theme, photo 2 of 7" loading="lazy">
+            <img src="images/theme-purple/3.jpg" alt="Purple theme, photo 3 of 7" loading="lazy">
+            <img src="images/theme-purple/4.jpg" alt="Purple theme, photo 4 of 7" loading="lazy">
+            <img src="images/theme-purple/5.jpg" alt="Purple theme, photo 5 of 7" loading="lazy">
+            <img src="images/theme-purple/6.jpg" alt="Purple theme, photo 6 of 7" loading="lazy">
+            <img src="images/theme-purple/7.jpg" alt="Purple theme, photo 7 of 7" loading="lazy">
+          </div>
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 7</span>
+        </div>
+        <div class="thumbs"></div>
+          </div>
+          <div class="spot-info">
+            <p class="spot-kind"><svg class="ic" aria-hidden="true"><use href="#flower"/></svg> Colour theme, 7 photos</p>
+            <h3>Purple</h3>
+            <p class="spot-desc">Purple wisteria with lavender bunches in rustic wooden vases.</p>
+            <p class="theme-note">Works with any picnic or dome package. Pick it in the booking form and we’ll style your set-up to match.</p>
+            <button class="btn btn-glow" type="button" data-theme-book="purple">Book with Purple theme</button>
+            <p class="spot-hint">Tap a photo to see it full size.</p>
+          </div>
+        </article>
+        <article class="spot theme-panel" data-panel="white" hidden>
+          <div class="spot-media">
+        <div class="carousel stage">
+          <div class="track" tabindex="0" aria-label="White theme photos">
+            <img src="images/theme-white/1.jpg" alt="White theme, photo 1 of 7" loading="lazy">
+            <img src="images/theme-white/2.jpg" alt="White theme, photo 2 of 7" loading="lazy">
+            <img src="images/theme-white/3.jpg" alt="White theme, photo 3 of 7" loading="lazy">
+            <img src="images/theme-white/4.jpg" alt="White theme, photo 4 of 7" loading="lazy">
+            <img src="images/theme-white/5.jpg" alt="White theme, photo 5 of 7" loading="lazy">
+            <img src="images/theme-white/6.jpg" alt="White theme, photo 6 of 7" loading="lazy">
+            <img src="images/theme-white/7.jpg" alt="White theme, photo 7 of 7" loading="lazy">
+          </div>
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 7</span>
+        </div>
+        <div class="thumbs"></div>
+          </div>
+          <div class="spot-info">
+            <p class="spot-kind"><svg class="ic" aria-hidden="true"><use href="#flower"/></svg> Colour theme, 7 photos</p>
+            <h3>White</h3>
+            <p class="spot-desc">White wisteria and baby’s breath with fresh green leaves. Calm and classic.</p>
+            <p class="theme-note">Works with any picnic or dome package. Pick it in the booking form and we’ll style your set-up to match.</p>
+            <button class="btn btn-glow" type="button" data-theme-book="white">Book with White theme</button>
+            <p class="spot-hint">Tap a photo to see it full size.</p>
+          </div>
+        </article>
         </div>
       </div>
     </section>
@@ -632,6 +832,11 @@
                 <option value="dome">Dome package</option>
                 <option value="rental">Event rental</option>
               </select>
+            </div>
+
+            <div class="field">
+              <label for="f-theme">Colour theme</label>
+              <select id="f-theme"></select>
             </div>
 
             <!-- Picnic fields -->

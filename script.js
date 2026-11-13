@@ -39,6 +39,17 @@ const RENTAL = {
   chair:   { name: "Chair",   price: 10 }
 };
 
+// Colour themes. One photo of each theme also shows in the hero.
+const THEMES = {
+  champagne: { name: "Champagne", hero: "images/theme-champagne/1.jpg", color: "#17110c" },
+  garden:    { name: "Garden",    hero: "images/theme-garden/4.jpg",    color: "#0e1513" },
+  blue:      { name: "Blue",      hero: "images/theme-blue/1.jpg",      color: "#0a1020" },
+  pink:      { name: "Pink",      hero: "images/theme-pink/3.jpg",      color: "#1a0d16" },
+  purple:    { name: "Purple",    hero: "images/theme-purple/7.jpg",    color: "#120c1f" },
+  white:     { name: "White",     hero: "images/theme-white/7.jpg",     color: "#101412" }
+};
+const DEFAULT_HERO = "images/white/1.jpg";
+
 // Add-on prices in RM.
 const ADDONS = { mat: 5, number: 6, fullBalloon: 15, fullBalloonWithNumber: 20 };
 
@@ -120,12 +131,15 @@ const f = {
   domePkg: $("#f-dome-pkg"), tier: $("#f-tier"),
   rDome: $("#r-dome"), rParasol: $("#r-parasol"), rTable: $("#r-table"), rChair: $("#r-chair"),
   mat: $("#a-mat"), number: $("#a-number"), full: $("#a-full"), character: $("#a-character"),
+  theme: $("#f-theme"),
   date: $("#f-date"), clock: $("#f-clock"), place: $("#f-place"), name: $("#f-name"), notes: $("#f-notes")
 };
 
 // Fill the package dropdowns from the price lists above
 for (const key in PICNIC) f.picnicPkg.add(new Option(PICNIC[key].name, key));
 for (const key in DOME) f.domePkg.add(new Option(DOME[key].name, key));
+f.theme.add(new Option("No preference", ""));
+for (const key in THEMES) f.theme.add(new Option(THEMES[key].name, key));
 
 // Earliest date you can pick is today
 const today = new Date();
@@ -232,6 +246,7 @@ $("#send-wa").addEventListener("click", () => {
   const [y, m, d] = f.date.value.split("-");
   const text = ["Hi Maghi's Picnic! I'd like to book a set-up.", ""];
   lines.forEach(([label, price]) => text.push("- " + label + (price === null ? " (please quote)" : " = " + rm(price))));
+  if (f.theme.value) text.push("Colour theme: " + THEMES[f.theme.value].name);
   text.push("Estimated total: " + rm(total), "");
   text.push("Date: " + d + "/" + m + "/" + y);
   if (f.clock.value) text.push("Time: " + f.clock.value);
@@ -302,7 +317,7 @@ $$(".carousel").forEach((carousel) => {
   const prev = carousel.querySelector(".prev");
   const next = carousel.querySelector(".next");
   const count = carousel.querySelector(".car-count");
-  const current = () => Math.round(track.scrollLeft / track.clientWidth);
+  const current = () => track.clientWidth ? Math.round(track.scrollLeft / track.clientWidth) : 0;
 
   // Small photos under the big one. Tap one to jump to it.
   const thumbs = carousel.nextElementSibling && carousel.nextElementSibling.classList.contains("thumbs")
@@ -346,6 +361,7 @@ $$(".carousel").forEach((carousel) => {
   });
   images.forEach((img, i) => img.addEventListener("click", () => openViewer(images, i)));
   if (images.length < 2) { prev.hidden = true; next.hidden = true; count.hidden = true; }
+  carousel.refresh = () => { track.scrollLeft = 0; shown = -1; update(); };
   update();
 });
 
@@ -362,13 +378,67 @@ if ("IntersectionObserver" in window && chips.length) {
       });
     });
   }, { rootMargin: "-45% 0px -50% 0px" });
-  $$(".spot").forEach((spot) => watch.observe(spot));
+  $$(".packages .spot").forEach((spot) => watch.observe(spot));
 }
 
 // Add-on photos open on their own
 $$(".zoom").forEach((button) => {
   button.addEventListener("click", () => openViewer([button.querySelector("img")], 0));
 });
+
+
+/* =========================================================
+   Colour themes
+   Tapping a colour shows that theme's photos and recolours
+   the whole page. The choice is remembered on this device.
+   ========================================================= */
+
+const heroPhoto = $("#hero-photo");
+const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+function applyTheme(key, remember) {
+  const theme = THEMES[key];
+  document.documentElement.dataset.theme = theme ? key : "maghi";
+  $$("[data-theme-pick]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.themePick === (theme ? key : "maghi")));
+  themeMeta.content = theme ? theme.color : "#140e1a";
+
+  if (theme) {
+    $$(".theme-panel").forEach((panel) => {
+      const show = panel.dataset.panel === key;
+      panel.hidden = !show;
+      if (show) panel.querySelector(".carousel").refresh();
+    });
+    f.theme.value = key;
+  }
+
+  // Swap the big hero photo with a quick fade
+  const src = theme ? theme.hero : DEFAULT_HERO;
+  if (!heroPhoto.src.endsWith(src)) {
+    heroPhoto.style.opacity = 0;
+    setTimeout(() => { heroPhoto.src = src; heroPhoto.style.opacity = 1; }, 250);
+  }
+
+  if (remember) {
+    try { localStorage.setItem("maghi-theme", theme ? key : "maghi"); } catch (e) { /* storage off, fine */ }
+  }
+}
+
+$$("[data-theme-pick]").forEach((b) => b.addEventListener("click", () => applyTheme(b.dataset.themePick, true)));
+
+// "Book with ... theme" buttons
+$$("[data-theme-book]").forEach((b) => b.addEventListener("click", () => {
+  applyTheme(b.dataset.themeBook, true);
+  showBooking();
+  $("#book").scrollIntoView();
+  f.theme.focus({ preventScroll: true });
+}));
+
+// Picking a theme in the form recolours the page too
+f.theme.addEventListener("change", () => { if (f.theme.value) applyTheme(f.theme.value, true); });
+
+let savedTheme = null;
+try { savedTheme = localStorage.getItem("maghi-theme"); } catch (e) { /* storage off, fine */ }
+if (savedTheme && THEMES[savedTheme]) applyTheme(savedTheme, false);
 
 
 // First paint
