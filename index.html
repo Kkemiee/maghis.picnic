@@ -5,19 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Maghi’s Picnic | Picnic set-ups, dome packages and event rental</title>
   <meta name="description" content="Maghi’s Picnic sets up parasols, domes, chairs and tables for birthdays, bride-to-be parties, open houses and gatherings. See packages and book on WhatsApp.">
+  <meta name="theme-color" content="#fde4e8">
   <meta property="og:title" content="Maghi’s Picnic">
   <meta property="og:description" content="Picnic set-ups, dome packages and event rental. Book on WhatsApp.">
   <meta property="og:image" content="images/white/1.jpg">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛱️</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍓</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,0..100,0..1&family=Nunito:wght@400..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Little drawings used around the page -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="flower" viewBox="0 0 40 40">
+      <circle cx="20" cy="10" r="8" fill="currentColor"/>
+      <circle cx="29.5" cy="16.9" r="8" fill="currentColor"/>
+      <circle cx="25.9" cy="28.1" r="8" fill="currentColor"/>
+      <circle cx="14.1" cy="28.1" r="8" fill="currentColor"/>
+      <circle cx="10.5" cy="16.9" r="8" fill="currentColor"/>
+      <circle cx="20" cy="20" r="5.5" fill="#f6c85f"/>
+    </symbol>
+    <symbol id="berry" viewBox="0 0 40 40">
+      <path d="M20 37C10 31 5 23 7 16c2-6 8-7 13-5 5-2 11-1 13 5 2 7-3 15-13 21z" fill="#e8536b"/>
+      <path d="M11 11l4-6 5 4 5-4 4 6-9 3z" fill="#6f9a4a"/>
+      <g fill="#ffe9b0"><ellipse cx="14" cy="19" rx="1.2" ry="1.8"/><ellipse cx="20" cy="17" rx="1.2" ry="1.8"/><ellipse cx="26" cy="19" rx="1.2" ry="1.8"/><ellipse cx="17" cy="25" rx="1.2" ry="1.8"/><ellipse cx="23" cy="25" rx="1.2" ry="1.8"/><ellipse cx="20" cy="31" rx="1.2" ry="1.8"/></g>
+    </symbol>
+  </svg>
+
   <!-- ============ TOP: HEADER + HERO ============ -->
-  <div class="sky">
+  <div class="gingham">
     <header class="wrap header">
       <a href="#top" class="brand" aria-label="Maghi’s Picnic home">
         <img src="images/logo.png" alt="Maghi’s Picnic" width="260" height="170">
@@ -29,7 +47,7 @@
         <a href="#addons">Add-ons</a>
         <a href="#book">Book</a>
       </nav>
-      <a class="btn btn-sun header-cta" data-wa href="https://wa.me/60137343736">WhatsApp us</a>
+      <a class="btn btn-matcha header-cta" data-wa href="https://wa.me/60137343736">WhatsApp us</a>
     </header>
 
     <section class="wrap hero" id="top">
@@ -37,8 +55,8 @@
         <h1>Picnic set-ups, ready when you arrive.</h1>
         <p class="lede">Maghi’s Picnic sets up parasols, domes, chairs and tables for birthdays, bride-to-be nights, open houses and gatherings. Pick a package, tell us the date and we’ll set it up for you.</p>
         <div class="hero-actions">
-          <a class="btn btn-sun" href="#book">Book a set-up</a>
-          <a class="btn btn-line" href="#picnic">See packages and prices</a>
+          <a class="btn btn-berry" href="#book">Book a set-up</a>
+          <a class="btn btn-soft" href="#packages">See packages and prices</a>
         </div>
         <ul class="hero-facts">
           <li><b>RM79</b> picnic for two</li>
@@ -46,13 +64,16 @@
           <li><b>RM10</b> chair or table rental</li>
         </ul>
       </div>
-      <div class="arches" aria-hidden="true">
-        <div class="arch arch-side"><img src="images/chandelier/2.jpg" alt=""></div>
-        <div class="arch arch-main"><img src="images/white/1.jpg" alt=""></div>
-        <div class="arch arch-side"><img src="images/double/1.jpg" alt=""></div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="arch hero-main"><img src="images/white/1.jpg" alt=""></div>
+        <div class="hero-bubble"><img src="images/chandelier/2.jpg" alt=""></div>
+        <svg class="sticker s1"><use href="#flower"/></svg>
+        <svg class="sticker s2"><use href="#berry"/></svg>
+        <svg class="sticker s3"><use href="#flower"/></svg>
       </div>
     </section>
   </div>
+  <div class="scallop" aria-hidden="true"></div>
 
   <main>
 
@@ -62,7 +83,7 @@
         <h2>What are you planning?</h2>
         <div class="occasions">
           <div class="occasion">
-            <h3><span aria-hidden="true">🎉</span> Personal and small events</h3>
+            <h3><span aria-hidden="true">🎂</span> Personal and small events</h3>
             <p>A santai seating zone for a birthday party, akikah or a small gathering with friends.</p>
           </div>
           <div class="occasion">
@@ -70,139 +91,249 @@
             <p>Seating for a Raya open house, BBQ night or a family lepak session.</p>
           </div>
           <div class="occasion">
-            <h3><span aria-hidden="true">🌿</span> Lifestyle and aesthetic events</h3>
+            <h3><span aria-hidden="true">🌷</span> Lifestyle and aesthetic events</h3>
             <p>Outdoor usrah, farewell gatherings, school events or a relax zone at an outdoor event.</p>
           </div>
           <div class="occasion">
-            <h3><span aria-hidden="true">🏢</span> Corporate and group events</h3>
+            <h3><span aria-hidden="true">🍃</span> Corporate and group events</h3>
             <p>Team building, company retreats and workshops.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ PICNIC PACKAGES ============ -->
-    <section class="section section-paper" id="picnic">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Picnic packages</h2>
-            <p class="section-intro">A parasol set-up with chairs, a table and styling. The price depends on how many people are coming. Night slots cost RM10 more. Swipe each photo to see more set-ups.</p>
+    <!-- ============ PACKAGES (picnic + dome) ============ -->
+    <div class="packages" id="packages">
+      <nav class="chipbar" aria-label="Jump to a package">
+        <div class="wrap chips">
+          <span class="chip-group">Picnic</span>
+          <a class="chip" href="#p-basic">Basic</a>
+          <a class="chip" href="#p-chandelier">Flower Chandelier</a>
+          <a class="chip" href="#p-flower">Flower Background</a>
+          <a class="chip" href="#p-balloon">Simple Balloon</a>
+          <span class="chip-group">Dome</span>
+          <a class="chip" href="#p-dome">Dome Package</a>
+          <a class="chip" href="#p-fullballoon">Dome Full Balloon</a>
+          <a class="chip" href="#p-character">Character Theme</a>
+          <a class="chip" href="#p-double">Double Dome</a>
+          <a class="chip" href="#p-bride">Bride To Be</a>
+          <a class="chip" href="#p-white">Dome In White</a>
+        </div>
+      </nav>
+
+      <section class="section" id="picnic">
+        <div class="wrap">
+          <h2>Picnic packages</h2>
+          <p class="section-intro">A parasol set-up with chairs, a table and styling. The price depends on how many people are coming. Night slots cost RM10 more.</p>
+
+      <article class="spot spot-berry" id="p-basic">
+        <div class="spot-media">
+        <div class="carousel stage">
+          <div class="track" tabindex="0" aria-label="Basic photos">
+            <img src="images/basic/1.jpg" alt="Basic, photo 1 of 4" loading="lazy">
+            <img src="images/basic/2.jpg" alt="Basic, photo 2 of 4" loading="lazy">
+            <img src="images/basic/3.jpg" alt="Basic, photo 3 of 4" loading="lazy">
+            <img src="images/basic/4.jpg" alt="Basic, photo 4 of 4" loading="lazy">
           </div>
-          <div class="controls" role="group" aria-label="Picnic price options">
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 4</span>
+        </div>
+        <div class="thumbs"></div>
+        </div>
+        <div class="spot-info">
+          <p class="spot-kind"><svg class="ic" aria-hidden="true"><use href="#flower"/></svg> Picnic package, 4 photos</p>
+          <h3>Basic</h3>
+          <p class="spot-desc">Parasol, chairs, table, cushions and a message board.</p>
+          <p class="price"><span data-price="picnic:basic">RM79</span> <small data-price-note="picnic">for 2 people, day</small></p>
+          <div class="spot-controls">
             <div class="control">
-              <span class="control-label" id="pax-label">People</span>
+              <span class="control-label">People</span>
               <div class="stepper">
-                <button type="button" id="pax-minus" aria-label="Fewer people">−</button>
-                <output id="pax-value" aria-labelledby="pax-label">2</output>
-                <button type="button" id="pax-plus" aria-label="More people">+</button>
+                <button type="button" data-pax="-1" aria-label="Fewer people">−</button>
+                <output class="pax-value">2</output>
+                <button type="button" data-pax="1" aria-label="More people">+</button>
               </div>
             </div>
             <div class="control">
               <span class="control-label">Time</span>
-              <div class="segmented" id="picnic-time">
+              <div class="segmented">
                 <button type="button" data-time="day" aria-pressed="true">Day</button>
                 <button type="button" data-time="night" aria-pressed="false">Night</button>
               </div>
             </div>
           </div>
+          <button class="btn btn-berry" type="button" data-book="picnic:basic">Book Basic</button>
+          <p class="spot-hint">Tap a photo to see it full size.</p>
         </div>
-
-        <div class="grid grid-4">
-          <article class="pkg">
-            <div class="arch pkg-photo carousel">
-              <div class="track" tabindex="0" aria-label="Basic picnic photos">
-                <img src="images/basic/1.jpg" alt="Basic picnic, photo 1 of 4" loading="lazy">
-                <img src="images/basic/2.jpg" alt="Basic picnic, photo 2 of 4" loading="lazy">
-                <img src="images/basic/3.jpg" alt="Basic picnic, photo 3 of 4" loading="lazy">
-                <img src="images/basic/4.jpg" alt="Basic picnic, photo 4 of 4" loading="lazy">
-              </div>
-              <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
-              <button type="button" class="car-btn next" aria-label="Next photo">›</button>
-              <span class="car-count">1 / 4</span>
-            </div>
-            <h3>Basic</h3>
-            <p>Parasol, chairs, table, cushions and a message board.</p>
-            <p class="price"><span data-price="picnic:basic">RM79</span> <small data-price-note="picnic">for 2 people, day</small></p>
-            <button class="btn btn-ink" type="button" data-book="picnic:basic">Book Basic</button>
-          </article>
-          <article class="pkg">
-            <div class="arch pkg-photo carousel">
-              <div class="track" tabindex="0" aria-label="Flower Chandelier picnic photos">
-                <img src="images/chandelier/1.jpg" alt="Flower Chandelier picnic, photo 1 of 3" loading="lazy">
-                <img src="images/chandelier/2.jpg" alt="Flower Chandelier picnic, photo 2 of 3" loading="lazy">
-                <img src="images/chandelier/3.jpg" alt="Flower Chandelier picnic, photo 3 of 3" loading="lazy">
-              </div>
-              <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
-              <button type="button" class="car-btn next" aria-label="Next photo">›</button>
-              <span class="car-count">1 / 3</span>
-            </div>
-            <h3>Flower Chandelier</h3>
-            <p>Everything in Basic, plus flowers hanging under the parasol.</p>
-            <p class="price"><span data-price="picnic:chandelier">RM83</span> <small data-price-note="picnic">for 2 people, day</small></p>
-            <button class="btn btn-ink" type="button" data-book="picnic:chandelier">Book Flower Chandelier</button>
-          </article>
-          <article class="pkg">
-            <div class="arch pkg-photo carousel">
-              <div class="track" tabindex="0" aria-label="Flower Background picnic photos">
-                <img src="images/flower/1.jpg" alt="Flower Background picnic, photo 1 of 6" loading="lazy">
-                <img src="images/flower/2.jpg" alt="Flower Background picnic, photo 2 of 6" loading="lazy">
-                <img src="images/flower/3.jpg" alt="Flower Background picnic, photo 3 of 6" loading="lazy">
-                <img src="images/flower/4.jpg" alt="Flower Background picnic, photo 4 of 6" loading="lazy">
-                <img src="images/flower/5.jpg" alt="Flower Background picnic, photo 5 of 6" loading="lazy">
-                <img src="images/flower/6.jpg" alt="Flower Background picnic, photo 6 of 6" loading="lazy">
-              </div>
-              <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
-              <button type="button" class="car-btn next" aria-label="Next photo">›</button>
-              <span class="car-count">1 / 6</span>
-            </div>
-            <h3>Flower Background</h3>
-            <p>Everything in Basic, plus a flower backdrop with a banner.</p>
-            <p class="price"><span data-price="picnic:flower">RM85</span> <small data-price-note="picnic">for 2 people, day</small></p>
-            <button class="btn btn-ink" type="button" data-book="picnic:flower">Book Flower Background</button>
-          </article>
-          <article class="pkg">
-            <div class="arch pkg-photo carousel">
-              <div class="track" tabindex="0" aria-label="Simple Balloon Background picnic photos">
-                <img src="images/balloon/1.jpg" alt="Simple Balloon Background picnic, photo 1 of 3" loading="lazy">
-                <img src="images/balloon/2.jpg" alt="Simple Balloon Background picnic, photo 2 of 3" loading="lazy">
-                <img src="images/balloon/3.jpg" alt="Simple Balloon Background picnic, photo 3 of 3" loading="lazy">
-              </div>
-              <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
-              <button type="button" class="car-btn next" aria-label="Next photo">›</button>
-              <span class="car-count">1 / 3</span>
-            </div>
-            <h3>Simple Balloon Background</h3>
-            <p>Everything in Basic, plus a row of balloons with a banner.</p>
-            <p class="price"><span data-price="picnic:balloon">RM98</span> <small data-price-note="picnic">for 2 people, day</small></p>
-            <button class="btn btn-ink" type="button" data-book="picnic:balloon">Book Simple Balloon</button>
-          </article>
+      </article>
+      <article class="spot spot-matcha" id="p-chandelier">
+        <div class="spot-media">
+        <div class="carousel stage">
+          <div class="track" tabindex="0" aria-label="Flower Chandelier photos">
+            <img src="images/chandelier/1.jpg" alt="Flower Chandelier, photo 1 of 3" loading="lazy">
+            <img src="images/chandelier/2.jpg" alt="Flower Chandelier, photo 2 of 3" loading="lazy">
+            <img src="images/chandelier/3.jpg" alt="Flower Chandelier, photo 3 of 3" loading="lazy">
+          </div>
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 3</span>
         </div>
-
-        <details class="pricelist">
-          <summary>See the full picnic price list</summary>
-          <div class="table-scroll">
-            <table id="picnic-table">
-              <caption>Day prices in RM. Add RM10 for a night slot.</caption>
-            </table>
-          </div>
-          <p class="fineprint">More than 16 people? WhatsApp us for a quote.</p>
-        </details>
-      </div>
-    </section>
-
-    <!-- ============ DOME PACKAGES ============ -->
-    <section class="section" id="dome">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Dome packages</h2>
-            <p class="section-intro">A khaki dome with seating inside. It gives you shade in the day and a cosy spot with lights at night. Swipe each photo to see more set-ups.</p>
-          </div>
-          <div class="controls" role="group" aria-label="Dome price options">
+        <div class="thumbs"></div>
+        </div>
+        <div class="spot-info">
+          <p class="spot-kind"><svg class="ic" aria-hidden="true"><use href="#flower"/></svg> Picnic package, 3 photos</p>
+          <h3>Flower Chandelier</h3>
+          <p class="spot-desc">Everything in Basic, plus flowers hanging under the parasol.</p>
+          <p class="price"><span data-price="picnic:chandelier">RM83</span> <small data-price-note="picnic">for 2 people, day</small></p>
+          <div class="spot-controls">
             <div class="control">
               <span class="control-label">People</span>
-              <div class="segmented" id="dome-tier">
+              <div class="stepper">
+                <button type="button" data-pax="-1" aria-label="Fewer people">−</button>
+                <output class="pax-value">2</output>
+                <button type="button" data-pax="1" aria-label="More people">+</button>
+              </div>
+            </div>
+            <div class="control">
+              <span class="control-label">Time</span>
+              <div class="segmented">
+                <button type="button" data-time="day" aria-pressed="true">Day</button>
+                <button type="button" data-time="night" aria-pressed="false">Night</button>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-berry" type="button" data-book="picnic:chandelier">Book Flower Chandelier</button>
+          <p class="spot-hint">Tap a photo to see it full size.</p>
+        </div>
+      </article>
+      <article class="spot spot-berry" id="p-flower">
+        <div class="spot-media">
+        <div class="carousel stage">
+          <div class="track" tabindex="0" aria-label="Flower Background photos">
+            <img src="images/flower/1.jpg" alt="Flower Background, photo 1 of 6" loading="lazy">
+            <img src="images/flower/2.jpg" alt="Flower Background, photo 2 of 6" loading="lazy">
+            <img src="images/flower/3.jpg" alt="Flower Background, photo 3 of 6" loading="lazy">
+            <img src="images/flower/4.jpg" alt="Flower Background, photo 4 of 6" loading="lazy">
+            <img src="images/flower/5.jpg" alt="Flower Background, photo 5 of 6" loading="lazy">
+            <img src="images/flower/6.jpg" alt="Flower Background, photo 6 of 6" loading="lazy">
+          </div>
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 6</span>
+        </div>
+        <div class="thumbs"></div>
+        </div>
+        <div class="spot-info">
+          <p class="spot-kind"><svg class="ic" aria-hidden="true"><use href="#flower"/></svg> Picnic package, 6 photos</p>
+          <h3>Flower Background</h3>
+          <p class="spot-desc">Everything in Basic, plus a flower backdrop with a banner.</p>
+          <p class="price"><span data-price="picnic:flower">RM85</span> <small data-price-note="picnic">for 2 people, day</small></p>
+          <div class="spot-controls">
+            <div class="control">
+              <span class="control-label">People</span>
+              <div class="stepper">
+                <button type="button" data-pax="-1" aria-label="Fewer people">−</button>
+                <output class="pax-value">2</output>
+                <button type="button" data-pax="1" aria-label="More people">+</button>
+              </div>
+            </div>
+            <div class="control">
+              <span class="control-label">Time</span>
+              <div class="segmented">
+                <button type="button" data-time="day" aria-pressed="true">Day</button>
+                <button type="button" data-time="night" aria-pressed="false">Night</button>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-berry" type="button" data-book="picnic:flower">Book Flower Background</button>
+          <p class="spot-hint">Tap a photo to see it full size.</p>
+        </div>
+      </article>
+      <article class="spot spot-matcha" id="p-balloon">
+        <div class="spot-media">
+        <div class="carousel stage">
+          <div class="track" tabindex="0" aria-label="Simple Balloon Background photos">
+            <img src="images/balloon/1.jpg" alt="Simple Balloon Background, photo 1 of 3" loading="lazy">
+            <img src="images/balloon/2.jpg" alt="Simple Balloon Background, photo 2 of 3" loading="lazy">
+            <img src="images/balloon/3.jpg" alt="Simple Balloon Background, photo 3 of 3" loading="lazy">
+          </div>
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 3</span>
+        </div>
+        <div class="thumbs"></div>
+        </div>
+        <div class="spot-info">
+          <p class="spot-kind"><svg class="ic" aria-hidden="true"><use href="#flower"/></svg> Picnic package, 3 photos</p>
+          <h3>Simple Balloon Background</h3>
+          <p class="spot-desc">Everything in Basic, plus a row of balloons with a banner.</p>
+          <p class="price"><span data-price="picnic:balloon">RM98</span> <small data-price-note="picnic">for 2 people, day</small></p>
+          <div class="spot-controls">
+            <div class="control">
+              <span class="control-label">People</span>
+              <div class="stepper">
+                <button type="button" data-pax="-1" aria-label="Fewer people">−</button>
+                <output class="pax-value">2</output>
+                <button type="button" data-pax="1" aria-label="More people">+</button>
+              </div>
+            </div>
+            <div class="control">
+              <span class="control-label">Time</span>
+              <div class="segmented">
+                <button type="button" data-time="day" aria-pressed="true">Day</button>
+                <button type="button" data-time="night" aria-pressed="false">Night</button>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-berry" type="button" data-book="picnic:balloon">Book Simple Balloon</button>
+          <p class="spot-hint">Tap a photo to see it full size.</p>
+        </div>
+      </article>
+
+          <details class="pricelist">
+            <summary>See the full picnic price list</summary>
+            <div class="table-scroll">
+              <table id="picnic-table">
+                <caption>Day prices in RM. Add RM10 for a night slot.</caption>
+              </table>
+            </div>
+            <p class="fineprint">More than 16 people? WhatsApp us for a quote.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section section-flush" id="dome">
+        <div class="wrap">
+          <h2>Dome packages</h2>
+          <p class="section-intro">A khaki dome with seating inside. It gives you shade in the day and a cosy spot with lights at night.</p>
+
+      <article class="spot spot-matcha" id="p-dome">
+        <div class="spot-media">
+        <div class="carousel stage">
+          <div class="track" tabindex="0" aria-label="Dome Package photos">
+            <img src="images/dome/1.jpg" alt="Dome Package, photo 1 of 6" loading="lazy">
+            <img src="images/dome/2.jpg" alt="Dome Package, photo 2 of 6" loading="lazy">
+            <img src="images/dome/3.jpg" alt="Dome Package, photo 3 of 6" loading="lazy">
+            <img src="images/dome/4.jpg" alt="Dome Package, photo 4 of 6" loading="lazy">
+            <img src="images/dome/5.jpg" alt="Dome Package, photo 5 of 6" loading="lazy">
+            <img src="images/dome/6.jpg" alt="Dome Package, photo 6 of 6" loading="lazy">
+          </div>
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 6</span>
+        </div>
+        <div class="thumbs"></div>
+        </div>
+        <div class="spot-info">
+          <p class="spot-kind"><svg class="ic" aria-hidden="true"><use href="#flower"/></svg> Dome package, 6 photos</p>
+          <h3>Dome Package</h3>
+          <p class="spot-desc">Dome, chairs, table, banner, balloons and a welcome sign.</p>
+          <p class="price"><span data-price="dome:dome">RM119</span> <small data-price-note="dome">for 2 people</small></p>
+          <div class="spot-controls">
+            <div class="control">
+              <span class="control-label">People</span>
+              <div class="segmented">
                 <button type="button" data-tier="0" aria-pressed="true">2</button>
                 <button type="button" data-tier="1" aria-pressed="false">3–4</button>
                 <button type="button" data-tier="2" aria-pressed="false">5–6</button>
@@ -211,142 +342,175 @@
               </div>
             </div>
           </div>
+          <button class="btn btn-berry" type="button" data-book="dome:dome">Book Dome Package</button>
+          <p class="spot-hint">Tap a photo to see it full size.</p>
         </div>
+      </article>
+      <article class="spot spot-berry" id="p-fullballoon">
+        <div class="spot-media">
+        <div class="carousel stage">
+          <div class="track" tabindex="0" aria-label="Dome Full Balloon photos">
+            <img src="images/fullballoon/1.jpg" alt="Dome Full Balloon, photo 1 of 3" loading="lazy">
+            <img src="images/fullballoon/2.jpg" alt="Dome Full Balloon, photo 2 of 3" loading="lazy">
+            <img src="images/fullballoon/3.jpg" alt="Dome Full Balloon, photo 3 of 3" loading="lazy">
+          </div>
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 3</span>
+        </div>
+        <div class="thumbs"></div>
+        </div>
+        <div class="spot-info">
+          <p class="spot-kind"><svg class="ic" aria-hidden="true"><use href="#flower"/></svg> Dome package, 3 photos</p>
+          <h3>Dome Full Balloon</h3>
+          <p class="spot-desc">The Dome Package with balloon columns at the entrance.</p>
+          <p class="price"><span data-price="dome:fullballoon">RM149</span> <small data-price-note="dome">for 2 people</small></p>
+          <div class="spot-controls">
+            <div class="control">
+              <span class="control-label">People</span>
+              <div class="segmented">
+                <button type="button" data-tier="0" aria-pressed="true">2</button>
+                <button type="button" data-tier="1" aria-pressed="false">3–4</button>
+                <button type="button" data-tier="2" aria-pressed="false">5–6</button>
+                <button type="button" data-tier="3" aria-pressed="false">7–8</button>
+                <button type="button" data-tier="4" aria-pressed="false">9–10</button>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-berry" type="button" data-book="dome:fullballoon">Book Dome Full Balloon</button>
+          <p class="spot-hint">Tap a photo to see it full size.</p>
+        </div>
+      </article>
+      <article class="spot spot-matcha" id="p-character">
+        <div class="spot-media">
+        <div class="carousel stage">
+          <div class="track" tabindex="0" aria-label="Dome Character Theme photos">
+            <img src="images/character/1.jpg" alt="Dome Character Theme, photo 1 of 8" loading="lazy">
+            <img src="images/character/2.jpg" alt="Dome Character Theme, photo 2 of 8" loading="lazy">
+            <img src="images/character/3.jpg" alt="Dome Character Theme, photo 3 of 8" loading="lazy">
+            <img src="images/character/4.jpg" alt="Dome Character Theme, photo 4 of 8" loading="lazy">
+            <img src="images/character/5.jpg" alt="Dome Character Theme, photo 5 of 8" loading="lazy">
+            <img src="images/character/6.jpg" alt="Dome Character Theme, photo 6 of 8" loading="lazy">
+            <img src="images/character/7.jpg" alt="Dome Character Theme, photo 7 of 8" loading="lazy">
+            <img src="images/character/8.jpg" alt="Dome Character Theme, photo 8 of 8" loading="lazy">
+          </div>
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 8</span>
+        </div>
+        <div class="thumbs"></div>
+        </div>
+        <div class="spot-info">
+          <p class="spot-kind"><svg class="ic" aria-hidden="true"><use href="#flower"/></svg> Dome package, 8 photos</p>
+          <h3>Dome Character Theme</h3>
+          <p class="spot-desc">A themed dome with character and number balloons.</p>
+          <p class="price"><span>RM188</span> <small>for 10 people</small></p>
 
-        <div class="grid grid-3">
-          <article class="pkg">
-            <div class="arch pkg-photo carousel">
-              <div class="track" tabindex="0" aria-label="Dome Package photos">
-                <img src="images/dome/1.jpg" alt="Dome Package, photo 1 of 6" loading="lazy">
-                <img src="images/dome/2.jpg" alt="Dome Package, photo 2 of 6" loading="lazy">
-                <img src="images/dome/3.jpg" alt="Dome Package, photo 3 of 6" loading="lazy">
-                <img src="images/dome/4.jpg" alt="Dome Package, photo 4 of 6" loading="lazy">
-                <img src="images/dome/5.jpg" alt="Dome Package, photo 5 of 6" loading="lazy">
-                <img src="images/dome/6.jpg" alt="Dome Package, photo 6 of 6" loading="lazy">
-              </div>
-              <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
-              <button type="button" class="car-btn next" aria-label="Next photo">›</button>
-              <span class="car-count">1 / 6</span>
-            </div>
-            <h3>Dome Package</h3>
-            <p>Dome, chairs, table, banner, balloons and a welcome sign.</p>
-            <p class="price"><span data-price="dome:dome">RM119</span> <small data-price-note="dome">for 2 people</small></p>
-            <button class="btn btn-ink" type="button" data-book="dome:dome">Book Dome Package</button>
-          </article>
-          <article class="pkg">
-            <div class="arch pkg-photo carousel">
-              <div class="track" tabindex="0" aria-label="Dome Full Balloon photos">
-                <img src="images/fullballoon/1.jpg" alt="Dome Full Balloon, photo 1 of 3" loading="lazy">
-                <img src="images/fullballoon/2.jpg" alt="Dome Full Balloon, photo 2 of 3" loading="lazy">
-                <img src="images/fullballoon/3.jpg" alt="Dome Full Balloon, photo 3 of 3" loading="lazy">
-              </div>
-              <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
-              <button type="button" class="car-btn next" aria-label="Next photo">›</button>
-              <span class="car-count">1 / 3</span>
-            </div>
-            <h3>Dome Full Balloon</h3>
-            <p>The Dome Package with balloon columns at the entrance.</p>
-            <p class="price"><span data-price="dome:fullballoon">RM149</span> <small data-price-note="dome">for 2 people</small></p>
-            <button class="btn btn-ink" type="button" data-book="dome:fullballoon">Book Dome Full Balloon</button>
-          </article>
-          <article class="pkg">
-            <div class="arch pkg-photo carousel">
-              <div class="track" tabindex="0" aria-label="Dome Character Theme photos">
-                <img src="images/character/1.jpg" alt="Dome Character Theme, photo 1 of 8" loading="lazy">
-                <img src="images/character/2.jpg" alt="Dome Character Theme, photo 2 of 8" loading="lazy">
-                <img src="images/character/3.jpg" alt="Dome Character Theme, photo 3 of 8" loading="lazy">
-                <img src="images/character/4.jpg" alt="Dome Character Theme, photo 4 of 8" loading="lazy">
-                <img src="images/character/5.jpg" alt="Dome Character Theme, photo 5 of 8" loading="lazy">
-                <img src="images/character/6.jpg" alt="Dome Character Theme, photo 6 of 8" loading="lazy">
-                <img src="images/character/7.jpg" alt="Dome Character Theme, photo 7 of 8" loading="lazy">
-                <img src="images/character/8.jpg" alt="Dome Character Theme, photo 8 of 8" loading="lazy">
-              </div>
-              <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
-              <button type="button" class="car-btn next" aria-label="Next photo">›</button>
-              <span class="car-count">1 / 8</span>
-            </div>
-            <h3>Dome Character Theme</h3>
-            <p>A themed dome with character and number balloons.</p>
-            <p class="price"><span>RM188</span> <small>for 10 people</small></p>
-            <button class="btn btn-ink" type="button" data-book="dome:character">Book Character Theme</button>
-          </article>
-          <article class="pkg">
-            <div class="arch pkg-photo carousel">
-              <div class="track" tabindex="0" aria-label="Double Dome photos">
-                <img src="images/double/1.jpg" alt="Double Dome, photo 1 of 13" loading="lazy">
-                <img src="images/double/2.jpg" alt="Double Dome, photo 2 of 13" loading="lazy">
-                <img src="images/double/3.jpg" alt="Double Dome, photo 3 of 13" loading="lazy">
-                <img src="images/double/4.jpg" alt="Double Dome, photo 4 of 13" loading="lazy">
-                <img src="images/double/5.jpg" alt="Double Dome, photo 5 of 13" loading="lazy">
-                <img src="images/double/6.jpg" alt="Double Dome, photo 6 of 13" loading="lazy">
-                <img src="images/double/7.jpg" alt="Double Dome, photo 7 of 13" loading="lazy">
-                <img src="images/double/8.jpg" alt="Double Dome, photo 8 of 13" loading="lazy">
-                <img src="images/double/9.jpg" alt="Double Dome, photo 9 of 13" loading="lazy">
-                <img src="images/double/10.jpg" alt="Double Dome, photo 10 of 13" loading="lazy">
-                <img src="images/double/11.jpg" alt="Double Dome, photo 11 of 13" loading="lazy">
-                <img src="images/double/12.jpg" alt="Double Dome, photo 12 of 13" loading="lazy">
-                <img src="images/double/13.jpg" alt="Double Dome, photo 13 of 13" loading="lazy">
-              </div>
-              <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
-              <button type="button" class="car-btn next" aria-label="Next photo">›</button>
-              <span class="car-count">1 / 13</span>
-            </div>
-            <h3>Double Dome</h3>
-            <p>Two domes joined together over a long table for a big group.</p>
-            <p class="price"><span>RM318</span></p>
-            <button class="btn btn-ink" type="button" data-book="dome:double">Book Double Dome</button>
-          </article>
-          <article class="pkg">
-            <div class="arch pkg-photo carousel">
-              <div class="track" tabindex="0" aria-label="Bride To Be dome photos">
-                <img src="images/bride/1.jpg" alt="Bride To Be dome, photo 1 of 6" loading="lazy">
-                <img src="images/bride/2.jpg" alt="Bride To Be dome, photo 2 of 6" loading="lazy">
-                <img src="images/bride/3.jpg" alt="Bride To Be dome, photo 3 of 6" loading="lazy">
-                <img src="images/bride/4.jpg" alt="Bride To Be dome, photo 4 of 6" loading="lazy">
-                <img src="images/bride/5.jpg" alt="Bride To Be dome, photo 5 of 6" loading="lazy">
-                <img src="images/bride/6.jpg" alt="Bride To Be dome, photo 6 of 6" loading="lazy">
-              </div>
-              <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
-              <button type="button" class="car-btn next" aria-label="Next photo">›</button>
-              <span class="car-count">1 / 6</span>
-            </div>
-            <h3>Bride To Be</h3>
-            <p>The Dome Package styled in white for a bride-to-be night.</p>
-            <p class="price"><span>RM139</span> <small>for 5 people</small></p>
-            <button class="btn btn-ink" type="button" data-book="dome:bride">Book Bride To Be</button>
-          </article>
-          <article class="pkg">
-            <div class="arch pkg-photo carousel">
-              <div class="track" tabindex="0" aria-label="Dome In White photos">
-                <img src="images/white/1.jpg" alt="Dome In White, photo 1 of 6" loading="lazy">
-                <img src="images/white/2.jpg" alt="Dome In White, photo 2 of 6" loading="lazy">
-                <img src="images/white/3.jpg" alt="Dome In White, photo 3 of 6" loading="lazy">
-                <img src="images/white/4.jpg" alt="Dome In White, photo 4 of 6" loading="lazy">
-                <img src="images/white/5.jpg" alt="Dome In White, photo 5 of 6" loading="lazy">
-                <img src="images/white/6.jpg" alt="Dome In White, photo 6 of 6" loading="lazy">
-              </div>
-              <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
-              <button type="button" class="car-btn next" aria-label="Next photo">›</button>
-              <span class="car-count">1 / 6</span>
-            </div>
-            <h3>Dome In White</h3>
-            <p>The Dome Package styled in white and green.</p>
-            <p class="price"><span>RM169</span> <small>for 10 people</small></p>
-            <button class="btn btn-ink" type="button" data-book="dome:white">Book Dome In White</button>
-          </article>
+          <button class="btn btn-berry" type="button" data-book="dome:character">Book Dome Character Theme</button>
+          <p class="spot-hint">Tap a photo to see it full size.</p>
         </div>
-      </div>
-    </section>
+      </article>
+      <article class="spot spot-berry" id="p-double">
+        <div class="spot-media">
+        <div class="carousel stage">
+          <div class="track" tabindex="0" aria-label="Double Dome photos">
+            <img src="images/double/1.jpg" alt="Double Dome, photo 1 of 13" loading="lazy">
+            <img src="images/double/2.jpg" alt="Double Dome, photo 2 of 13" loading="lazy">
+            <img src="images/double/3.jpg" alt="Double Dome, photo 3 of 13" loading="lazy">
+            <img src="images/double/4.jpg" alt="Double Dome, photo 4 of 13" loading="lazy">
+            <img src="images/double/5.jpg" alt="Double Dome, photo 5 of 13" loading="lazy">
+            <img src="images/double/6.jpg" alt="Double Dome, photo 6 of 13" loading="lazy">
+            <img src="images/double/7.jpg" alt="Double Dome, photo 7 of 13" loading="lazy">
+            <img src="images/double/8.jpg" alt="Double Dome, photo 8 of 13" loading="lazy">
+            <img src="images/double/9.jpg" alt="Double Dome, photo 9 of 13" loading="lazy">
+            <img src="images/double/10.jpg" alt="Double Dome, photo 10 of 13" loading="lazy">
+            <img src="images/double/11.jpg" alt="Double Dome, photo 11 of 13" loading="lazy">
+            <img src="images/double/12.jpg" alt="Double Dome, photo 12 of 13" loading="lazy">
+            <img src="images/double/13.jpg" alt="Double Dome, photo 13 of 13" loading="lazy">
+          </div>
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 13</span>
+        </div>
+        <div class="thumbs"></div>
+        </div>
+        <div class="spot-info">
+          <p class="spot-kind"><svg class="ic" aria-hidden="true"><use href="#flower"/></svg> Dome package, 13 photos</p>
+          <h3>Double Dome</h3>
+          <p class="spot-desc">Two domes joined together over a long table for a big group. Comes in blue and brown themes.</p>
+          <p class="price"><span>RM318</span></p>
+
+          <button class="btn btn-berry" type="button" data-book="dome:double">Book Double Dome</button>
+          <p class="spot-hint">Tap a photo to see it full size.</p>
+        </div>
+      </article>
+      <article class="spot spot-matcha" id="p-bride">
+        <div class="spot-media">
+        <div class="carousel stage">
+          <div class="track" tabindex="0" aria-label="Bride To Be photos">
+            <img src="images/bride/1.jpg" alt="Bride To Be, photo 1 of 6" loading="lazy">
+            <img src="images/bride/2.jpg" alt="Bride To Be, photo 2 of 6" loading="lazy">
+            <img src="images/bride/3.jpg" alt="Bride To Be, photo 3 of 6" loading="lazy">
+            <img src="images/bride/4.jpg" alt="Bride To Be, photo 4 of 6" loading="lazy">
+            <img src="images/bride/5.jpg" alt="Bride To Be, photo 5 of 6" loading="lazy">
+            <img src="images/bride/6.jpg" alt="Bride To Be, photo 6 of 6" loading="lazy">
+          </div>
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 6</span>
+        </div>
+        <div class="thumbs"></div>
+        </div>
+        <div class="spot-info">
+          <p class="spot-kind"><svg class="ic" aria-hidden="true"><use href="#flower"/></svg> Dome package, 6 photos</p>
+          <h3>Bride To Be</h3>
+          <p class="spot-desc">The Dome Package styled in white for a bride-to-be night.</p>
+          <p class="price"><span>RM139</span> <small>for 5 people</small></p>
+
+          <button class="btn btn-berry" type="button" data-book="dome:bride">Book Bride To Be</button>
+          <p class="spot-hint">Tap a photo to see it full size.</p>
+        </div>
+      </article>
+      <article class="spot spot-berry" id="p-white">
+        <div class="spot-media">
+        <div class="carousel stage">
+          <div class="track" tabindex="0" aria-label="Dome In White photos">
+            <img src="images/white/1.jpg" alt="Dome In White, photo 1 of 6" loading="lazy">
+            <img src="images/white/2.jpg" alt="Dome In White, photo 2 of 6" loading="lazy">
+            <img src="images/white/3.jpg" alt="Dome In White, photo 3 of 6" loading="lazy">
+            <img src="images/white/4.jpg" alt="Dome In White, photo 4 of 6" loading="lazy">
+            <img src="images/white/5.jpg" alt="Dome In White, photo 5 of 6" loading="lazy">
+            <img src="images/white/6.jpg" alt="Dome In White, photo 6 of 6" loading="lazy">
+          </div>
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 6</span>
+        </div>
+        <div class="thumbs"></div>
+        </div>
+        <div class="spot-info">
+          <p class="spot-kind"><svg class="ic" aria-hidden="true"><use href="#flower"/></svg> Dome package, 6 photos</p>
+          <h3>Dome In White</h3>
+          <p class="spot-desc">The Dome Package styled in white and green.</p>
+          <p class="price"><span>RM169</span> <small>for 10 people</small></p>
+
+          <button class="btn btn-berry" type="button" data-book="dome:white">Book Dome In White</button>
+          <p class="spot-hint">Tap a photo to see it full size.</p>
+        </div>
+      </article>
+        </div>
+      </section>
+    </div>
 
     <!-- ============ RENTAL ============ -->
-    <section class="section section-paper" id="rental">
+    <section class="section section-matcha" id="rental">
       <div class="wrap">
         <div class="section-head">
           <div>
             <h2>Rent for your own event</h2>
             <p class="section-intro">Hosting at home, at school or at the office? Rent only the pieces you need. Prices are for 4 hours. Delivery is for 10 people and above.</p>
           </div>
-          <button class="btn btn-ink" type="button" data-book="rental:custom">Book a rental</button>
+          <button class="btn btn-berry" type="button" data-book="rental:custom">Book a rental</button>
         </div>
 
         <div class="items">
@@ -357,70 +521,70 @@
         </div>
 
         <h3 class="subhead">Past rental set-ups</h3>
-        <div class="grid grid-4">
-          <article class="pkg">
-            <div class="arch pkg-photo carousel">
-              <div class="track" tabindex="0" aria-label="22 chairs and 5 tables rental photos">
-                <img src="images/rental-chairs/1.jpg" alt="22 chairs and 5 tables rental, photo 1 of 6" loading="lazy">
-                <img src="images/rental-chairs/2.jpg" alt="22 chairs and 5 tables rental, photo 2 of 6" loading="lazy">
-                <img src="images/rental-chairs/3.jpg" alt="22 chairs and 5 tables rental, photo 3 of 6" loading="lazy">
-                <img src="images/rental-chairs/4.jpg" alt="22 chairs and 5 tables rental, photo 4 of 6" loading="lazy">
-                <img src="images/rental-chairs/5.jpg" alt="22 chairs and 5 tables rental, photo 5 of 6" loading="lazy">
-                <img src="images/rental-chairs/6.jpg" alt="22 chairs and 5 tables rental, photo 6 of 6" loading="lazy">
-              </div>
-              <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
-              <button type="button" class="car-btn next" aria-label="Next photo">›</button>
-              <span class="car-count">1 / 6</span>
-            </div>
-            <h3>22 chairs and 5 tables</h3>
-            <p class="price"><span>RM270</span></p>
-          </article>
-          <article class="pkg">
-            <div class="arch pkg-photo carousel">
-              <div class="track" tabindex="0" aria-label="24 chairs, 7 tables and balloon deco rental photos">
-                <img src="images/rental-kesyukuran/1.jpg" alt="24 chairs, 7 tables and balloon deco rental, photo 1 of 6" loading="lazy">
-                <img src="images/rental-kesyukuran/2.jpg" alt="24 chairs, 7 tables and balloon deco rental, photo 2 of 6" loading="lazy">
-                <img src="images/rental-kesyukuran/3.jpg" alt="24 chairs, 7 tables and balloon deco rental, photo 3 of 6" loading="lazy">
-                <img src="images/rental-kesyukuran/4.jpg" alt="24 chairs, 7 tables and balloon deco rental, photo 4 of 6" loading="lazy">
-                <img src="images/rental-kesyukuran/5.jpg" alt="24 chairs, 7 tables and balloon deco rental, photo 5 of 6" loading="lazy">
-                <img src="images/rental-kesyukuran/6.jpg" alt="24 chairs, 7 tables and balloon deco rental, photo 6 of 6" loading="lazy">
-              </div>
-              <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
-              <button type="button" class="car-btn next" aria-label="Next photo">›</button>
-              <span class="car-count">1 / 6</span>
-            </div>
-            <h3>24 chairs, 7 tables and balloon deco</h3>
-            <p class="price"><span>RM335</span></p>
-          </article>
-          <article class="pkg">
-            <div class="arch pkg-photo carousel">
-              <div class="track" tabindex="0" aria-label="Dome and parasol lepak zone photos">
-                <img src="images/rental-lepak/1.jpg" alt="Dome and parasol lepak zone, photo 1 of 5" loading="lazy">
-                <img src="images/rental-lepak/2.jpg" alt="Dome and parasol lepak zone, photo 2 of 5" loading="lazy">
-                <img src="images/rental-lepak/3.jpg" alt="Dome and parasol lepak zone, photo 3 of 5" loading="lazy">
-                <img src="images/rental-lepak/4.jpg" alt="Dome and parasol lepak zone, photo 4 of 5" loading="lazy">
-                <img src="images/rental-lepak/5.jpg" alt="Dome and parasol lepak zone, photo 5 of 5" loading="lazy">
-              </div>
-              <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
-              <button type="button" class="car-btn next" aria-label="Next photo">›</button>
-              <span class="car-count">1 / 5</span>
-            </div>
-            <h3>Dome and parasol lepak zone, 4 hours</h3>
-            <p class="price"><span>RM260</span></p>
-          </article>
-          <article class="pkg">
-            <div class="arch pkg-photo carousel">
-              <div class="track" tabindex="0" aria-label="Open house set-up photos">
-                <img src="images/rental-openhouse/1.jpg" alt="Open house set-up, photo 1 of 2" loading="lazy">
-                <img src="images/rental-openhouse/2.jpg" alt="Open house set-up, photo 2 of 2" loading="lazy">
-              </div>
-              <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
-              <button type="button" class="car-btn next" aria-label="Next photo">›</button>
-              <span class="car-count">1 / 2</span>
-            </div>
-            <h3>Open house set-up, 5 hours</h3>
-            <p class="price"><span>RM350</span></p>
-          </article>
+        <div class="past-grid">
+        <article class="past">
+        <div class="carousel stage stage-wide">
+          <div class="track" tabindex="0" aria-label="22 chairs and 5 tables photos">
+            <img src="images/rental-chairs/1.jpg" alt="22 chairs and 5 tables, photo 1 of 6" loading="lazy">
+            <img src="images/rental-chairs/2.jpg" alt="22 chairs and 5 tables, photo 2 of 6" loading="lazy">
+            <img src="images/rental-chairs/3.jpg" alt="22 chairs and 5 tables, photo 3 of 6" loading="lazy">
+            <img src="images/rental-chairs/4.jpg" alt="22 chairs and 5 tables, photo 4 of 6" loading="lazy">
+            <img src="images/rental-chairs/5.jpg" alt="22 chairs and 5 tables, photo 5 of 6" loading="lazy">
+            <img src="images/rental-chairs/6.jpg" alt="22 chairs and 5 tables, photo 6 of 6" loading="lazy">
+          </div>
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 6</span>
+        </div>
+        <div class="thumbs"></div>
+          <div class="past-info"><h4>22 chairs and 5 tables</h4><p class="price"><span>RM270</span></p></div>
+        </article>
+        <article class="past">
+        <div class="carousel stage stage-wide">
+          <div class="track" tabindex="0" aria-label="24 chairs, 7 tables and balloon deco photos">
+            <img src="images/rental-kesyukuran/1.jpg" alt="24 chairs, 7 tables and balloon deco, photo 1 of 6" loading="lazy">
+            <img src="images/rental-kesyukuran/2.jpg" alt="24 chairs, 7 tables and balloon deco, photo 2 of 6" loading="lazy">
+            <img src="images/rental-kesyukuran/3.jpg" alt="24 chairs, 7 tables and balloon deco, photo 3 of 6" loading="lazy">
+            <img src="images/rental-kesyukuran/4.jpg" alt="24 chairs, 7 tables and balloon deco, photo 4 of 6" loading="lazy">
+            <img src="images/rental-kesyukuran/5.jpg" alt="24 chairs, 7 tables and balloon deco, photo 5 of 6" loading="lazy">
+            <img src="images/rental-kesyukuran/6.jpg" alt="24 chairs, 7 tables and balloon deco, photo 6 of 6" loading="lazy">
+          </div>
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 6</span>
+        </div>
+        <div class="thumbs"></div>
+          <div class="past-info"><h4>24 chairs, 7 tables and balloon deco</h4><p class="price"><span>RM335</span></p></div>
+        </article>
+        <article class="past">
+        <div class="carousel stage stage-wide">
+          <div class="track" tabindex="0" aria-label="Dome and parasol lepak zone, 4 hours photos">
+            <img src="images/rental-lepak/1.jpg" alt="Dome and parasol lepak zone, 4 hours, photo 1 of 5" loading="lazy">
+            <img src="images/rental-lepak/2.jpg" alt="Dome and parasol lepak zone, 4 hours, photo 2 of 5" loading="lazy">
+            <img src="images/rental-lepak/3.jpg" alt="Dome and parasol lepak zone, 4 hours, photo 3 of 5" loading="lazy">
+            <img src="images/rental-lepak/4.jpg" alt="Dome and parasol lepak zone, 4 hours, photo 4 of 5" loading="lazy">
+            <img src="images/rental-lepak/5.jpg" alt="Dome and parasol lepak zone, 4 hours, photo 5 of 5" loading="lazy">
+          </div>
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 5</span>
+        </div>
+        <div class="thumbs"></div>
+          <div class="past-info"><h4>Dome and parasol lepak zone, 4 hours</h4><p class="price"><span>RM260</span></p></div>
+        </article>
+        <article class="past">
+        <div class="carousel stage stage-wide">
+          <div class="track" tabindex="0" aria-label="Open house set-up, 5 hours photos">
+            <img src="images/rental-openhouse/1.jpg" alt="Open house set-up, 5 hours, photo 1 of 2" loading="lazy">
+            <img src="images/rental-openhouse/2.jpg" alt="Open house set-up, 5 hours, photo 2 of 2" loading="lazy">
+          </div>
+          <button type="button" class="car-btn prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="car-btn next" aria-label="Next photo">›</button>
+          <span class="car-count">1 / 2</span>
+        </div>
+        <div class="thumbs"></div>
+          <div class="past-info"><h4>Open house set-up, 5 hours</h4><p class="price"><span>RM350</span></p></div>
+        </article>
         </div>
       </div>
     </section>
@@ -429,20 +593,20 @@
     <section class="section" id="addons">
       <div class="wrap">
         <h2>Add-ons</h2>
-        <p class="section-intro">Small extras you can add to a picnic or dome package.</p>
-        <div class="grid addons">
+        <p class="section-intro">Small extras you can add to a picnic or dome package. Tap a photo to see it full size.</p>
+        <div class="addons">
           <div class="addon"><button type="button" class="zoom"><img src="images/addon/1.jpg" alt="Picnic mat beside the set-up" loading="lazy"></button><h3>Mat</h3><p class="price"><span>+RM5</span></p></div>
           <div class="addon"><button type="button" class="zoom"><img src="images/addon/2.jpg" alt="Pink number balloon beside a balloon row" loading="lazy"></button><h3>Number balloon</h3><p class="price"><span>+RM6</span> <small>each</small></p></div>
           <div class="addon"><button type="button" class="zoom"><img src="images/addon/3.jpg" alt="Full balloon background behind a picnic set-up" loading="lazy"></button><h3>Full balloon background</h3><p class="price"><span>+RM15</span></p></div>
           <div class="addon"><button type="button" class="zoom"><img src="images/addon/4.jpg" alt="Full balloon background with a number balloon" loading="lazy"></button><h3>Full balloon background with number balloon</h3><p class="price"><span>+RM20</span></p></div>
           <div class="addon"><button type="button" class="zoom"><img src="images/addon/5.jpg" alt="Character balloons beside a balloon row" loading="lazy"></button><h3>Character balloons</h3><p class="price"><small>Ask us for the price</small></p></div>
         </div>
-        <p class="fineprint">For character balloons, tell us the theme on WhatsApp and we’ll give you the price.</p>
+        <p class="fineprint addon-note">For character balloons, tell us the theme on WhatsApp and we’ll give you the price.</p>
       </div>
     </section>
 
     <!-- ============ BOOKING ============ -->
-    <section class="section section-paper" id="book">
+    <section class="section section-berry" id="book">
       <div class="wrap">
         <h2>Book your set-up</h2>
         <ol class="steps">
@@ -534,12 +698,13 @@
           </form>
 
           <aside class="summary" aria-live="polite">
+            <svg class="summary-berry" aria-hidden="true"><use href="#berry"/></svg>
             <h3>Your booking</h3>
             <ul id="summary-lines"></ul>
             <p class="summary-total"><span>Estimated total</span> <b id="summary-total">RM79</b></p>
             <p class="form-msg" id="form-msg" role="alert" hidden></p>
             <button class="btn btn-wa" type="button" id="send-wa">Send booking on WhatsApp</button>
-            <a class="btn btn-line-ink" id="pay-link" href="#" target="_blank" rel="noopener" hidden>Pay online</a>
+            <a class="btn btn-soft" id="pay-link" href="#" target="_blank" rel="noopener" hidden>Pay online</a>
             <p class="fineprint">This opens WhatsApp with your booking details filled in. We’ll confirm the final price and your date there.</p>
           </aside>
         </div>

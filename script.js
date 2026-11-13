@@ -69,8 +69,11 @@ let picnicPax = 2;
 let picnicTime = "day";
 let domeTier = 0;
 
+// Every picnic spotlight has its own people and time controls.
+// They all share the same choice, so changing one updates the rest.
 function showPicnicPrices() {
-  $("#pax-value").textContent = picnicPax;
+  $$(".pax-value").forEach((el) => { el.textContent = picnicPax; });
+  $$("[data-time]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.time === picnicTime));
   $$('[data-price^="picnic:"]').forEach((el) => {
     el.textContent = rm(picnicPrice(el.dataset.price.split(":")[1], picnicPax, picnicTime));
   });
@@ -79,6 +82,7 @@ function showPicnicPrices() {
   });
 }
 function showDomePrices() {
+  $$("[data-tier]").forEach((b) => b.setAttribute("aria-pressed", Number(b.dataset.tier) === domeTier));
   $$('[data-price^="dome:"]').forEach((el) => {
     el.textContent = rm(domePrice(el.dataset.price.split(":")[1], domeTier));
   });
@@ -86,19 +90,14 @@ function showDomePrices() {
     el.textContent = "for " + DOME_TIERS[domeTier];
   });
 }
-function press(group, chosen) {
-  group.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b === chosen));
-}
 
-$("#pax-minus").addEventListener("click", () => { picnicPax = Math.max(MIN_PAX, picnicPax - 1); showPicnicPrices(); });
-$("#pax-plus").addEventListener("click", () => { picnicPax = Math.min(MAX_PAX, picnicPax + 1); showPicnicPrices(); });
-$("#picnic-time").addEventListener("click", (e) => {
-  const b = e.target.closest("button"); if (!b) return;
-  picnicTime = b.dataset.time; press($("#picnic-time"), b); showPicnicPrices();
-});
-$("#dome-tier").addEventListener("click", (e) => {
-  const b = e.target.closest("button"); if (!b) return;
-  domeTier = Number(b.dataset.tier); press($("#dome-tier"), b); showDomePrices();
+document.addEventListener("click", (e) => {
+  const pax = e.target.closest("[data-pax]");
+  if (pax) { picnicPax = Math.min(MAX_PAX, Math.max(MIN_PAX, picnicPax + Number(pax.dataset.pax))); showPicnicPrices(); }
+  const time = e.target.closest("button[data-time]");
+  if (time) { picnicTime = time.dataset.time; showPicnicPrices(); }
+  const tier = e.target.closest("button[data-tier]");
+  if (tier) { domeTier = Number(tier.dataset.tier); showDomePrices(); }
 });
 
 // Full picnic price table
@@ -305,11 +304,36 @@ $$(".carousel").forEach((carousel) => {
   const count = carousel.querySelector(".car-count");
   const current = () => Math.round(track.scrollLeft / track.clientWidth);
 
+  // Small photos under the big one. Tap one to jump to it.
+  const thumbs = carousel.nextElementSibling && carousel.nextElementSibling.classList.contains("thumbs")
+    ? carousel.nextElementSibling : null;
+  const thumbButtons = [];
+  if (thumbs && images.length > 1) {
+    images.forEach((img, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("aria-label", "Show photo " + (i + 1));
+      const t = document.createElement("img");
+      t.src = img.getAttribute("src"); t.alt = ""; t.loading = "lazy";
+      b.append(t);
+      b.addEventListener("click", () => track.scrollTo({ left: i * track.clientWidth, behavior: "smooth" }));
+      thumbs.append(b);
+      thumbButtons.push(b);
+    });
+  }
+
+  let shown = -1;
   function update() {
     const i = current();
     count.textContent = (i + 1) + " / " + images.length;
     prev.disabled = i === 0;
     next.disabled = i === images.length - 1;
+    if (i !== shown && thumbButtons.length) {
+      thumbButtons.forEach((b, j) => b.setAttribute("aria-current", j === i));
+      const b = thumbButtons[i];
+      thumbs.scrollTo({ left: b.offsetLeft - thumbs.clientWidth / 2 + b.clientWidth / 2, behavior: "smooth" });
+    }
+    shown = i;
   }
   const go = (step) => track.scrollTo({ left: (current() + step) * track.clientWidth, behavior: "smooth" });
 
@@ -324,6 +348,22 @@ $$(".carousel").forEach((carousel) => {
   if (images.length < 2) { prev.hidden = true; next.hidden = true; count.hidden = true; }
   update();
 });
+
+// Highlight the package you are looking at in the jump bar
+const chips = [...$$(".chip")];
+if ("IntersectionObserver" in window && chips.length) {
+  const watch = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      chips.forEach((chip) => {
+        const on = chip.getAttribute("href") === "#" + entry.target.id;
+        chip.setAttribute("aria-current", on);
+        if (on) chip.parentElement.scrollTo({ left: chip.offsetLeft - 20, behavior: "smooth" });
+      });
+    });
+  }, { rootMargin: "-45% 0px -50% 0px" });
+  $$(".spot").forEach((spot) => watch.observe(spot));
+}
 
 // Add-on photos open on their own
 $$(".zoom").forEach((button) => {
