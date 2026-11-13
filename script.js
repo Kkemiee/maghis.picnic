@@ -41,12 +41,12 @@ const RENTAL = {
 
 // Colour themes. One photo of each theme also shows in the hero.
 const THEMES = {
-  champagne: { name: "Champagne", hero: "images/theme-champagne/1.jpg", color: "#17110c" },
-  garden:    { name: "Garden",    hero: "images/theme-garden/4.jpg",    color: "#0e1513" },
-  blue:      { name: "Blue",      hero: "images/theme-blue/1.jpg",      color: "#0a1020" },
-  pink:      { name: "Pink",      hero: "images/theme-pink/3.jpg",      color: "#1a0d16" },
-  purple:    { name: "Purple",    hero: "images/theme-purple/7.jpg",    color: "#120c1f" },
-  white:     { name: "White",     hero: "images/theme-white/7.jpg",     color: "#101412" }
+  champagne: { name: "Champagne", hero: "images/theme-champagne/1.jpg", color: "#fff5ea" },
+  garden:    { name: "Garden",    hero: "images/theme-garden/4.jpg",    color: "#f2f8ff" },
+  blue:      { name: "Blue",      hero: "images/theme-blue/1.jpg",      color: "#edf5ff" },
+  pink:      { name: "Pink",      hero: "images/theme-pink/3.jpg",      color: "#fff0f7" },
+  purple:    { name: "Purple",    hero: "images/theme-purple/7.jpg",    color: "#f6efff" },
+  white:     { name: "White",     hero: "images/theme-white/7.jpg",     color: "#f4fbf6" }
 };
 const DEFAULT_HERO = "images/white/1.jpg";
 
@@ -400,7 +400,7 @@ function applyTheme(key, remember) {
   const theme = THEMES[key];
   document.documentElement.dataset.theme = theme ? key : "maghi";
   $$("[data-theme-pick]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.themePick === (theme ? key : "maghi")));
-  themeMeta.content = theme ? theme.color : "#140e1a";
+  themeMeta.content = theme ? theme.color : "#fff2f7";
 
   if (theme) {
     $$(".theme-panel").forEach((panel) => {
